@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>订单</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/order.css">
+  </head>
+  <style>
+      *{
+          margin:0;
+          padding:0;
+      }
+      #box{
+          width:798px;
+          height:598px;
+          border:1px solid black;
+          margin:0 auto;
+          
+           position: relative;
+      }
+      #phone{
+          width:373px;
+          height:590px;
+          border: 1px solid black;
+          margin:2px;
+         
+      }
+      #header{
+          width:373px;
+          height:45px;
+          background: black;
+          display: flex;
+      }
+      #header div{
+          color:white;
+          flex: 1;
+          line-height: 45px;
+      }
+      .back{
+          text-align: left;
+          padding-left: 5px;
+      }
+      .home{
+          text-align: center;
+      }
+      .setting{
+          text-align: right;
+          padding-right:5px;
+      }
+      #model{
+        position: absolute;
+        left:400px;
+        width:300px;
+        height:400px;
+        background:#ababab; 
+        top:10px;
+        border-radius: 5px;
+      }
+      #model::before{
+          content: "";
+          width:0;
+          height:0;
+          border-top:7px solid transparent;
+          border-right:7px solid  #ababab;
+          border-bottom:7px solid transparent;
+        position: absolute;
+        top:10px;
+        left:-7px;
+      }
+  </style>
+  <body>
+    <div id="box">
+        <div id="phone">
+            <div id="header">
+                <div class="back">返回</div>
+                <div class="home">店铺主业</div>
+                <div class="setting">...</div>
+            </div>
+            <section>
+
+            </section>
+            <footer>
+
+            </footer>
+        </div>
+        <div id="model"></div>
+    </div>
+     
+  </body>
+</html>
