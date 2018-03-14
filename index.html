@@ -3,73 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>订单</title>
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/order.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+   
   </head>
-  <style>
-      *{
-          margin:0;
-          padding:0;
-      }
-      #box{
-          width:798px;
-          height:598px;
-          border:1px solid black;
-          margin:0 auto;
-          
-           position: relative;
-      }
-      #phone{
-          width:373px;
-          height:590px;
-          border: 1px solid black;
-          margin:2px;
-         
-      }
-      #header{
-          width:373px;
-          height:45px;
-          background: black;
-          display: flex;
-      }
-      #header div{
-          color:white;
-          flex: 1;
-          line-height: 45px;
-      }
-      .back{
-          text-align: left;
-          padding-left: 5px;
-      }
-      .home{
-          text-align: center;
-      }
-      .setting{
-          text-align: right;
-          padding-right:5px;
-      }
-      #model{
-        position: absolute;
-        left:400px;
-        width:300px;
-        height:400px;
-        background:#ababab; 
-        top:10px;
-        border-radius: 5px;
-      }
-      #model::before{
-          content: "";
-          width:0;
-          height:0;
-          border-top:7px solid transparent;
-          border-right:7px solid  #ababab;
-          border-bottom:7px solid transparent;
-        position: absolute;
-        top:10px;
-        left:-7px;
-      }
-  </style>
   <body>
     <div id="box">
         <div id="phone">
@@ -79,14 +16,129 @@
                 <div class="setting">...</div>
             </div>
             <section>
-
+                <div class="shop">
+                  <ul>
+                    <li>
+                      <a>
+                        <div class="shop_img"><img src="https://img.yzcdn.cn/upload_files/2018/03/13/0c3606ee96756b5b67dce937a3345023.png"></div>
+                        <div class="text_message">
+                          <div>此处显示商品</div>
+                          <div class="price .clearfloat"><span>￥999.00</span><i></i></div>
+                        </div>
+                        <div><i></i></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                         <div class="shop_img"><img src="https://img.yzcdn.cn/upload_files/2018/03/13/0c3606ee96756b5b67dce937a3345023.png"></div>
+                        <div class="text_message">
+                          <div>此处显示商品</div>
+                         <div class="price .clearfloat"><span>￥999.00</span><i></i></div>
+                        </div>
+                        <div><i></i></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="shop_img"><img src="https://img.yzcdn.cn/upload_files/2018/03/13/0c3606ee96756b5b67dce937a3345023.png"></div>
+                        <div class="text_message">
+                          <div>此处显示商品</div>
+                          <div class="price .clearfloat"><span>￥999.00</span><i></i></div>
+                        </div>
+                        <div><i></i></div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
             </section>
             <footer>
 
             </footer>
         </div>
-        <div id="model"></div>
+        <div id="model">
+          <form id="form">
+            <div class="shop_home">
+              <p>商品</p>
+              <hr style="height:1px;border:none;border-top:1px solid #555555;margin:4px 0" />
+              <span >商品来源：</span>
+              <input type="radio" name="shop" value="shop" id="shop" checked><label for="shop">商品</label>
+              <input type="radio" name="shop" id="shop_group" value="shop_group"><label for="shop_group">商品分组</label>
+            </div>
+            <div class="shop_groups">
+              <div>
+                <span>商品分组:</span><span>从商品分组中选择</span>
+              </div>
+              <div>
+                <span>显示个数:</span><input type="text" value=""><span style="padding-left: 0;font-size: 12px; ">最多显示50个</span>
+              </div>
+            </div>
+            <div class="list_style">
+                <span>列表样式:</span>
+                <input type="radio" name="lists_style" value="大图" id="big_picture" checked><label for="big_picture">大图</label>
+                <input type="radio" name="lists_style" value="小图" id="little_picture"><label for="little_picture">小图</label>
+                <input type="radio" name="lists_style" value="一大两小" id="big_little_picture"><label for="big_little_picture">一大两小</label><br>
+                <input style="margin-left:92px;" type="radio" name="lists_style" value="详情列表" id="detail_list"><label for="detail_list">详情列表</label>
+                <input type="radio" name="lists_style" value="一行三个" id="three_picture"><label for="three_picture">一行三个</label><br>
+                <input style="margin-left:92px;" type="radio" name="lists_style" value="横向滑动" id="cross_slip"><label for="cross_slip">横向滑动</label>
+            </div>
+            <div class="control_card">
+                <div>
+                    <span>图片填充方式:</span>
+                    <input type="radio" name="content" value="填充" id="stuff" checked><label for="stuff">填充</label>
+                    <input type="radio" name="content" value="填充" id="empty"><label for="empty">留白</label>
+                </div> 
+                <div>
+                    <span>显示比例:</span>
+                    <input type="radio" name="size" value="尺寸" id="three_two" checked><label for="three_two">3:2</label>
+                    <input type="radio" name="size" value="尺寸" id="one_one"><label for="one_one">1:1</label>
+                </div>
+                <div>
+                    <span>显示样式:</span>
+                    <input type="radio" name="card_style" value="卡片1" id="card_one" checked><label for="card_one">卡片1</label>
+                    <input type="radio" name="card_style" value="卡片2" id="card_two"><label for="card_two">卡片2</label>
+                    <input type="radio" name="card_style" value="瀑布流" id="pinterest"><label for="pinterest">瀑布流</label>
+                    <input type="radio" name="card_style" value="极简" id="card_easy"><label for="card_easy">极简</label>
+                    <input type="radio" name="card_style" value="促销" id="sales_promotion"><label for="sales_promotion">促销</label>
+                </div>
+                <div class="coentent_show">
+                   <span>显示内容:</span>
+                   <div>
+                      <input type="checkbox" name="content_style" value="商品名称" id="shop_name" checked><label for="shop_name">商品名称</label><br>
+                      <div>
+                         <input type="checkbox" name="content_style" value="商品简介" id="shop_introduction" checked><label for="shop_introduction ">商品简介</label>
+                      </div>
+
+                      <input type="checkbox" name="content_style" value="商品价格" id="shop_price" checked><label for="shop_price">商品价格</label><br>
+                      <!-- <div> -->
+                      <input type="checkbox" name="content_style" value=""购买按钮 id="buy_btn" checked><label for="buy_btn">购买按钮</label><br>
+                      <div>
+                        <input type="radio" name="buy_style" value="样式1" id="btn_style_one"><label for="btn_style_one">样式1</label>
+                        <input type="radio" name="buy_style" value="样式2" id="btn_style_two"><label for="btn_style_two">样式2</label>
+                        <input type="radio" name="buy_style" value="样式3" id="btn_style_three"><label for="btn_style_three">样式3</label>
+                        <input type="radio" name="buy_style" value="样式4" id="btn_style_four"><label for="btn_style_four">样式4</label>
+                        <div>
+                            <input type="text" value="马上抢" style="width:60px;height: 20px;padding-left: 10px;">
+                      <!--  <span style="width:19px;height:19px ;background: rgb(153,153,153);border-radius: 50%;display: block;">1</span> -->
+                        </div>
+                      </div>
+                     <!-- </div> -->
+                      <input type="checkbox" name="content_style" value="商品角标" id="shop_superscript" checked><label for="shop_superscript">商品角标</label><br>
+                      <div>
+                        <input type="radio" name="superscript_style" value="新品" id="new_shop" checked><label for="new_shop">新品</label>
+                        <input type="radio" name="superscript_style" value="热卖" id="hot_shop"><label for="card_two">卡片2</label>
+                        <input type="radio" name="superscript_style" value="NEW" id="new"><label for="new">NEW</label>
+                        <input type="radio" name="superscript_style" value="HOT" id="hot"><label for="hot">HOT</label><br>
+                        <input type="radio" name="superscript_style" value="自定义" id="user_undefined"><label for="user_undefined">自定义</label>
+                        <div>
+                         <input type="file" name="picture" value="+">
+                        </div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+          </form>
+        </div>
     </div>
-     
+     <script src="main.js"></script>
   </body>
 </html>

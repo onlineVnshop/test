@@ -1,0 +1,169 @@
+*{
+    margin:0;
+    padding:0;
+}
+/* 盒子 */
+#box{
+    width:798px;
+    height:750px;
+    border:1px solid black;
+    margin:0 auto;
+    
+     position: relative;
+}
+/* 左侧模拟手机栏 */
+#phone{
+    width:373px;
+    height:667px;
+    border: 1px solid black;
+    margin:2px;
+   
+}
+#header{
+    width:373px;
+    height:45px;
+    background: black;
+    display: flex;
+}
+#header div{
+    color:white;
+    flex: 1;
+    line-height: 45px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.back{
+    text-align: left;
+    padding-left: 5px;
+}
+.home{
+    text-align: center;
+}
+#header .setting{
+    text-align: right;
+    padding-right:5px;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.shop{
+  width: 373px;
+  height: 100%; 
+}
+.shop ul{
+  list-style: none;
+}
+.shop ul li{
+  width:100% ;
+}
+.shop ul li a{
+  width:330px;
+  height: 180px;
+  display: block;
+  border: 1px solid #ababab;
+  background: rgb(248,248,248);
+  margin:0px auto;
+  margin-bottom: 16px;
+}
+.shop ul li:first-child a{
+  margin-top: 8px;
+}
+.shop_img{
+  width: 100%;
+}
+.shop_img img{
+  width:330px;
+  height:130px;
+  
+}
+.text_message{
+  margin-left: 7px;
+  margin-right: 7px;
+}
+.price span{
+  float: left;
+}
+.price i{
+  float: right;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+
+}
+/* 右侧设置栏*/
+#model{
+  display: none;
+  position: absolute;
+  left:400px;
+  width:300px;
+  height:600px;
+  background:#f8f8f8; 
+  top:50px;
+  border-radius: 5px;
+}
+#model::before{
+  content: "";
+  width:0;
+  height:0;
+  border-top:7px solid transparent;
+  border-right:7px solid  #f8f8f8;
+  border-bottom:7px solid transparent;
+  position: absolute;
+  top:10px;
+  left:-7px;
+}
+#form{
+  margin: 6px;
+  /* background: blue; */
+  width: 288px;
+  height: 588px;
+
+}
+.shop_home span{
+  padding-left: 20px;
+}
+.shop_groups{
+  margin-top:12px;
+  width: 286px;
+  height: 88px;
+  border: 1px solid black;
+  background-color: white;
+}
+.shop_groups input{
+  width: 85px;
+  height: 20px;
+  margin-left: 19px;
+}
+.shop_groups div{
+
+  line-height: 42px;
+}
+.shop_groups div>span{
+  padding-left: 19px;
+}
+.list_style{
+  margin-top:12px;
+  width: 288px;
+  height: 88px;
+  line-height: 28px;
+}
+.list_style span{
+  padding-left: 19px;
+}
+.list_style label{
+  padding-left: 5px;
+}
+.control_card{
+  margin-top:12px;
+  width: 286px;
+  height: 316px;
+  border: 1px solid black;
+}
+.control_card div span{
+  padding-left: 19px;
+}
+.content_show input{
+  margin-left: 23px;
+}
