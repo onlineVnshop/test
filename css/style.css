@@ -1,10 +1,7 @@
-*{
-    margin:0;
-    padding:0;
-}
+
 /* 盒子 */
 #box{
-    width:798px;
+    width:850px;
     height:750px;
     border:1px solid black;
     margin:0 auto;
@@ -48,8 +45,33 @@
 }
 
 .shop{
-  width: 373px;
+  width: 371px;
   height: 100%; 
+  position: relative;
+  border: 1px dashed blue;
+}
+.btn_top, .btn_down, .clear{
+  position: absolute;
+  width:20px;
+  height:20px;
+  background: blue;
+  color:white;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+}
+.btn_top{
+  left: 50%;
+  top:-10px;
+}
+.btn_down{
+  left: 50%;
+  bottom:-10px;
+}
+.clear{
+  right:-10px;
+  top:-10px;
+  background: #ababab;
 }
 .shop ul{
   list-style: none;
@@ -97,7 +119,7 @@
   display: none;
   position: absolute;
   left:400px;
-  width:300px;
+  width:400px;
   height:600px;
   background:#f8f8f8; 
   top:50px;
@@ -117,7 +139,7 @@
 #form{
   margin: 6px;
   /* background: blue; */
-  width: 288px;
+  width: 388px;
   height: 588px;
 
 }
@@ -126,7 +148,7 @@
 }
 .shop_groups{
   margin-top:12px;
-  width: 286px;
+  width: 386px;
   height: 88px;
   border: 1px solid black;
   background-color: white;
@@ -145,9 +167,9 @@
 }
 .list_style{
   margin-top:12px;
-  width: 288px;
+  width: 388px;
   height: 88px;
-  line-height: 28px;
+  line-height: 43px;
 }
 .list_style span{
   padding-left: 19px;
@@ -157,9 +179,12 @@
 }
 .control_card{
   margin-top:12px;
-  width: 286px;
+  width: 386px;
   height: 316px;
   border: 1px solid black;
+}
+.control_card div{
+  margin-top:3px;
 }
 .control_card div span{
   padding-left: 19px;
