@@ -42,7 +42,10 @@ a{
     text-decoration: none;
     display: block; 
 }
+span,label{
+    line-height: 21px;
 
+}
 img{
     border: none;
     display: block;
