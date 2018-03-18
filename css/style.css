@@ -45,10 +45,11 @@
 }
 
 .shop{
-  width: 320px;
+  width: 318px;
   height: 100%; 
   position: relative;
-  /* border: 1px dashed blue; */
+  border: 1px dashed blue;
+  /* overflow: hidden; */
 }
 .btn_top, .btn_down, .clear{
   position: absolute;
@@ -76,15 +77,18 @@
   top:-10px;
   background: #ababab;
 }
-.shop_component{
+.compentent_container{
+  width: 100%;
+  overflow: hidden;
+}
+/*商品组件一 start*/
+.shop_component_one{
   list-style: none;
   width:318px;
   height: 100%;
   display: block;
-  border: 1px dashed #3388ff;
 }
-/*商品组件一 start*/
-/* .container_one{
+ .container_one{
   position: relative;
   width:288px;
   display: block;
@@ -141,17 +145,342 @@
   width:32px;
   height: 32px;
   background: green;
-} */
+} 
 /* 商品组件一end */
 /* 商品组件二start */
-.caontainer_two{
+
+.shop_component_two{
+  list-style: none;
+  width:310px;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  padding: 0px 4px;
+}
+.container_two{
+  float: left;
+  width: 50%;
+}
+.container_two a{
+  margin: 5px 3px;
+  width: 149px;  
+  height: 100%;
+  border: 1px solid black;
+}
+.shop_img_two{
+  width: 149px;
+ position: relative; 
+}
+.container_two a img{
+  width: 100%;
+}
+.text_message_two{
+  width: 149px;
+}
+.title{
+  margin:10px 10px 13px 10px;
+}
+.price_two{
+  position: relative;
+  margin: 30px 10px 0 10px;
+}
+.cart_btn_two{
+  position: absolute;
+  top:0px ;
+  right: 0px;
+}
+.surper_script_two{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+/*商品组件3 */
+.shop_component_three{
+  list-style: none;
+  width:308px;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  padding: 0 5px;
+}
+ .container_three_one{
+  position: relative;
+  width:304px;
+  display: block;
+  background: rgb(248,248,248);
+  margin:5px 2px 15px 2px;
+}
+
+.shop_img_three_one{
+  width: 100%;
+}
+.shop_img_three_one img{
+  width:304px;
+  height:193px;
+}
+.text_message_three_one{
+  width: 284px;
+  padding: 10px 10px 10px 10px;
   
 }
+.text_message_three_one div{
+  margin: 4px 0;
+} 
+.text_message_three_one div h3{
+  line-height: 24px;
+}
+.text_message_three_one div p{
+  padding: 5px 0;
+}
+.price_three_one {
+  width: 284px;
+  height: 30px;
+  margin: 4px 0;
+
+}
+.price_three_one span{
+  line-height: 30px;
+   font-size: 19px;
+  float: left;
+  color: red;
+}
+.price_three_one i{
+  float: right;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 1px solid black;
+  vertical-align: center;
+}
+.icon_three_one{
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width:32px;
+  height: 32px;
+  background: green;
+} 
+.container_three_two{
+  float: left;
+  width: 50%;
+}
+.container_three_two a{
+  margin: 5px 3px;
+  width: 149px;  
+  height: 100%;
+}
+.shop_img_three_two{
+  width: 149px;
+ position: relative; 
+}
+.container_three_two a img{
+  width: 100%;
+}
+.text_message_three_two{
+  width: 149px;
+}
+.title{
+  margin:10px 10px 13px 10px;
+}
+.price_three_two{
+  position: relative;
+  margin: 30px 10px 0 10px;
+}
+.cart_btn_three_two{
+  position: absolute;
+  top:0px ;
+  right: 0px;
+}
+.surper_script_three_two{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+/* 商品组件3end */
+/*商品组件4start*/
+.shop_component_four{
+  /* padding: 5px 0px; */
+  /* overflow: hidden; */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.container_four{
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+.container_four a{
+  border: 1px solid #e5e5e5;
+  width: 288px;
+  height: 118px;
+  display: block;
+   margin: 5px 15px 15px 15px;
+}
+.shop_img_four{
+  float: left;
+   width: 118px;
+   height: 118px;
+   margin-right: 10px;
+   position: relative;
+}
+.shop_img_four img{
+  width: 100%;
+  height: 100%;
+}
+.surper_script_four{
+  position:absolute;
+  left: 0px;
+  top: 0px;
+}
+.text_message_four{
+  float: left;
+  width: 149px;
+  height: 118px;
+  margin-right: 10px;
+  position: relative;
+}
+.title_four{
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.sub_title_four{
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.price_four{
+  position: absolute;
+  width: 149px;
+  bottom: 10px;
+  left: 0px;
+}
+.price_four em{
+  float: left;
+  color: red;
+}
+.price_four span{
+  float: right;
+}
+/* 商品组件4end */
+/* 商品组件5start */
+
+.shop_component_five{
+  list-style: none;
+  padding: 0 7px;
+  overflow: hidden;
+  width: 304px;
+
+}
+.container_five{
+  float: left;
+  width: 32%;
+  padding: 5px 2px;
+}
+.container_five a{
+  width: 100%;
+  overflow: hidden;
+  
+}
+.shop_img_five{
+  width: 100%;
+  position: relative;
+} 
+.surper_script_five{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.shop_img_five img{
+  width: 95px;
+  height: 95px;
+}
+.title_five{
+    font-size: 12px;
+    line-height: 16px;
+    height: 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+    padding: 10px 10px 0px 10px;
+}
+.price_five{
+    font-size: 14px;
+    width: 87px;
+    padding-left: 10px;
+}
+.price_five em{
+  float: left:;
+  color: red;
+}
+.price_five span{
+  float: right;
+}
+/* 商品组件5end */
 footer{
   height: 200px;
   width: 320px;
   background: gray;
 }
+/* 商品组件start6 */
+.shop_component_six{
+  width: 306px;
+  padding: 0 7px 10px 7px;
+  margin-bottom: -10px;
+  height:170px ;
+  overflow: hidden;
+}
+.shop_component_six_container{
+  width: 376px;
+  height: 170px;
+}
+.container_six{
+  height:170px ;
+  width: 90px;
+  padding: 0 2px;
+  float: left;
+}
+.container_six a{
+  padding: 5px 2px;
+}
+.shop_img_six{
+  position: relative;
+  width: 100%;
+}
+.shop_img_six img{
+  height: 90px; 
+  width: 86px;
+}
+.surper_script_six{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.text_message_six{
+  width: 76px;
+  padding: 10px 0px 0px 10px;
+}
+.title_six{
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    overflow: hidden;
+    padding-right: 10px;
+
+}
+.price_six{
+  width: 76px;
+  font-size: 14px;
+}
+.price_six em{
+  color:red;
+  float: left;
+}
+.price_six span{
+  float: right;
+}
+/* 商品组件6end */
 /* 右侧设置栏*/
 #model{
   display: none;
