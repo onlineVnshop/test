@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_496401_ct7zj4srqjkedn29.css">
+    <script type="text/javascript" src="libs/js/jquery.js"></script>
   </head>
   <body>
     <div id="box">
@@ -17,82 +18,10 @@
             </div>
             <section>
                 <div class="shop">
-                  <div class="btn_top">+</div>
+              <!--     <div class="btn_top">+</div>
                   <div class="btn_down">+</div>
-                  <div class="clear">x</div>
+                  <div class="clear">x</div> -->
                   <div class="compentent_container">
-                      <!-- <div class="shop_component_six">
-                        <ul class="shop_component_six_container">
-                            <li class="container_six">
-                                <a href="#">
-                                  <div class="shop_img_six">
-                                    <img src="https://img.yzcdn.cn/upload_files/2018/03/13/0c3606ee96756b5b67dce937a3345023.png">
-                                    <div class="surper_script_six">
-                                      <i>*</i>
-                                    </div>
-                                  </div>
-                                  <div class="text_message_six">
-                                    <h3 class="title_six">此处显示商品名称</h3>
-                                    <p class="price_six">
-                                      <em>￥999.00</em>
-                                      <span>+</span>
-                                    </p>
-                                  </div>
-                                </a>
-                            </li>
-                            <li class="container_six">
-                                <a href="#">
-                                  <div class="shop_img_six">
-                                    <img src="https://img.yzcdn.cn/upload_files/2018/03/13/0c3606ee96756b5b67dce937a3345023.png">
-                                    <div class="surper_script_six">
-                                      <i>*</i>
-                                    </div>
-                                  </div>
-                                  <div class="text_message_six">
-                                    <h3 class="title_six">此处显示商品名称</h3>
-                                    <p class="price_six">
-                                      <em>￥999.00</em>
-                                      <span>+</span>
-                                    </p>
-                                  </div>
-                                </a>
-                            </li>
-                            <li class="container_six">
-                                <a href="#">
-                                  <div class="shop_img_six">
-                                    <img src="https://img.yzcdn.cn/upload_files/2018/03/13/0c3606ee96756b5b67dce937a3345023.png">
-                                    <div class="surper_script_six">
-                                      <i>*</i>
-                                    </div>
-                                  </div>
-                                  <div class="text_message_six">
-                                    <h3 class="title_six">此处显示商品名称</h3>
-                                    <p class="price_six">
-                                      <em>￥999.00</em>
-                                      <span>+</span>
-                                    </p>
-                                  </div>
-                                </a>
-                            </li>
-                            <li class="container_six">
-                                <a href="#">
-                                  <div class="shop_img_six">
-                                    <img src="https://img.yzcdn.cn/upload_files/2018/03/13/0c3606ee96756b5b67dce937a3345023.png">
-                                    <div class="surper_script_six">
-                                      <i>*</i>
-                                    </div>
-                                  </div>
-                                  <div class="text_message_six">
-                                    <h3 class="title_six">此处显示商品名称</h3>
-                                    <p class="price_six">
-                                      <em>￥999.00</em>
-                                      <span>+</span>
-                                    </p>
-                                  </div>
-                                </a>
-                            </li>
-                          </ul>
-                      </div> -->
                   </div>
                 </div>
             </section>
@@ -106,23 +35,29 @@
               <div class="shop_home">
                  <div class="shop_home_text">商品来源:</div>
                  <div class="shop_and_groups">
-                    <label>
-                      <div class="big_circle">
+                    
+                      <div class="big_circle checked" state=0>
                         <div class="little_circle"></div>
                       </div>
-                      <span>商品</span>
-                    </label>
+                      <label>商品</label>
                     
-                    <div class="checked">
+                      <div class="big_circle" state=1>
                         <div class="little_circle"></div>
-                    </div>
-                    <label for="shop_group">商品分组</label>
+                      </div>
+                      <label>商品分组</label>
                  </div>
               </div>
             </div>
             <div class="shop_groups">
-              <!-- 商品分组 -->
-                <div class="shop_groups_one">
+              <!-- 商品 -->
+                <div class="shop_groups_one" state=0>
+                    <div id="shop_group_one_title">商品:</div>
+                    <div>
+                        <div class="shop_group_one_files_show">+</div>
+                    </div>
+                </div>
+                <!-- 商品分组 -->
+                <div class="shop_groups_two" state=1>
                     <div>
                       <span>商品分组:</span><span>从商品分组中选择</span>
                     </div>
@@ -130,36 +65,37 @@
                       <span>显示个数:</span><input type="text" value=""><span>最多显示50个</span>
                     </div>
                 </div>
-                <!--商品  -->
-              <!--   <div class="shop_groups_two">
-                    <span>商品:</span>
-                    <div class="files_show ">+</div>
-                </div> -->
+
             </div>
             <div class="list_style">
                 <span>列表样式:</span>
                 <div class="list_style_content">
-                    <div class="checked">
+                    <div class="big_circle checked " state=0>
                          <div class="little_circle"></div>
                     </div>
                     <label for="big_picture">大图</label>
-                    <div class="big_circle">
+
+                    <div class="big_circle" state=1>
                         <div class="little_circle"></div>
                     </div>
                     <label for="little_picture">小图</label>
-                    <div class="big_circle">
+
+                    <div class="big_circle" state=2>
                       <div class="little_circle"></div>
                     </div>
                     <label for="big_little_picture">一大两小</label>
-                    <div class="big_circle">
+
+                    <div class="big_circle" state=3>
                       <div class="little_circle"></div>
                     </div>
                     <label for="detail_list">详情列表</label>
-                    <div class="big_circle">
+
+                    <div class="big_circle" state=4>
                       <div class="little_circle"></div>
                     </div>
                     <label for="three_picture">一行三个</label>
-                    <div class="big_circle">
+
+                    <div class="big_circle" state=5>
                       <div class="little_circle"></div>
                     </div>
                     <label for="cross_slip">横向滑动</label>
@@ -168,7 +104,7 @@
             <div class="control_card">
                 <div class="control_card_fill">
                     <span>图片填充方式:</span>
-                    <div class="checked">
+                    <div class="big_circle checked">
                       <div class="little_circle"></div>
                     </div>
                     <label for="stuff">填充</label>
@@ -179,7 +115,7 @@
                 </div> 
                 <div class="size_show">
                     <span>显示比例:</span>
-                    <div class="checked">
+                    <div class="big_circle checked">
                       <div class="little_circle"></div>
                     </div>
                     <label for="three_two">3:2</label>
@@ -191,7 +127,7 @@
                 <div class="style_show">
                     <span>显示样式:</span>
                     <div class="style_show_select" >
-                        <div class="checked">
+                        <div class="big_circle checked">
                         <div class="little_circle"></div>
                         </div>
                         <label for="card_one">卡片1</label>
@@ -217,24 +153,24 @@
                    <span>显示内容:</span>
                    <div class="content_show_list">
                       <div>
-                            <div class="square">
+                            <div class="square cancle">
                             √
                             </div>
                             <label for="shop_name">商品名称</label><br>
                             <div class="shop_introduction">
-                                <div class="cancle">√</div>
+                                <div class="square">√</div>
                              <label for="shop_introduction ">商品简介</label>
                             </div>
                       </div>
                       <div>
-                            <div class="cancle">√</div>
+                            <div class="square">√</div>
                             <label for="shop_price">商品价格</label>
                       </div>
                       <div>
-                            <div class="cancle">√</div>
+                            <div class="square">√</div>
                             <label for="buy_btn">购买按钮</label><br>
                             <div class="buy_btn_style">
-                                  <div class="checked">
+                                  <div class="big_circle checked">
                                     <div class="little_circle"></div>
                                   </div>
                                   <label for="btn_style_one">样式1</label>
@@ -260,10 +196,10 @@
                             </div>
                       </div>
                       <div>
-                            <div class="cancle">√</div>
+                            <div class="square">√</div>
                             <label for="shop_superscript">商品角标</label>
                             <div class="shop_superscript_type">
-                                <div class="checked">
+                                <div class="big_circle checked">
                                   <div class="little_circle"></div>
                                 </div>
                                 <label for="new_shop">新品</label>

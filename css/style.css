@@ -1,11 +1,10 @@
 
 /* 盒子 */
 #box{
-    width:850px;
-    height:850px;
-    border:1px solid black;
-    margin:0 auto;
-    
+     width:850px;
+     height:850px;
+     border:1px solid black;
+     margin:0 auto;    
      position: relative;
 }
 /* 左侧模拟手机栏 */
@@ -45,11 +44,16 @@
 }
 
 .shop{
-  width: 318px;
+  width: 320px;
   height: 100%; 
   position: relative;
-  border: 1px dashed blue;
-  /* overflow: hidden; */
+  border-left: 1px dashed white;
+  border-right: 1px dashed white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+ 
+  border: hidden;
+ 
 }
 .btn_top, .btn_down, .clear{
   position: absolute;
@@ -60,6 +64,7 @@
   text-align: center;
   line-height: 20px;
   border-radius: 50%;
+  display: none;
   z-index: 1000;
 }
 .btn_top{
@@ -79,7 +84,7 @@
 }
 .compentent_container{
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 /*商品组件一 start*/
 .shop_component_one{
@@ -87,6 +92,7 @@
   width:318px;
   height: 100%;
   display: block;
+  position: relative;
 }
  .container_one{
   position: relative;
@@ -154,12 +160,17 @@
   width:310px;
   height: 100%;
   display: block;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 0px 4px;
+  position: relative;
+}
+.container{
+  overflow: hidden;
 }
 .container_two{
   float: left;
   width: 50%;
+  overflow: hidden;
 }
 .container_two a{
   margin: 5px 3px;
@@ -200,8 +211,9 @@
   width:308px;
   height: 100%;
   display: block;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 0 5px;
+  position: relative;
 }
  .container_three_one{
   position: relative;
@@ -300,11 +312,10 @@
 /* 商品组件3end */
 /*商品组件4start*/
 .shop_component_four{
-  /* padding: 5px 0px; */
-  /* overflow: hidden; */
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
+  position: relative;
 }
 .container_four{
    width: 100%;
@@ -369,9 +380,9 @@
 .shop_component_five{
   list-style: none;
   padding: 0 7px;
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 304px;
-
+  position: relative;
 }
 .container_five{
   float: left;
@@ -425,11 +436,12 @@ footer{
 }
 /* 商品组件start6 */
 .shop_component_six{
-  width: 306px;
-  padding: 0 7px 10px 7px;
-  margin-bottom: -10px;
+  width: 311px;
+  padding: 0 0px 10px 7px;
+  /* margin-bottom: -10px; */
   height:170px ;
-  overflow: hidden;
+  
+  position: relative;
 }
 .shop_component_six_container{
   width: 376px;
@@ -603,7 +615,7 @@ footer{
 label{
   font-size: 12px;
   display: inline-block;
-  width: 48px;
+  width: 71px;
   height: 15px;
   /* margin-right: 15px; */
 }
@@ -617,28 +629,47 @@ label span{
   background-color: #fff;
   padding: 10px 0;
 }
-.shop_groups input{
+.shop_groups_two input{
   width: 85px;
   height: 20px;
 }
-.shop_groups div{
+.shop_groups_two div{
   line-height: 42px;
 }
-.shop_groups div>span{
+.shop_groups_two div>span{
   font-size: 12px;
-  /* line-height: 21px; */
 }
 .shop_groups_one{
+  padding: 5px 0px 30px 0px;
   margin-bottom: 20px;
-  /* border: 1px solid black; */
-  /* padding: 10px 0; */
 }
-.shop_groups_one>div{
+#shop_group_one_title{
+  float: left;
+  font-size: 12px;
+  width: 85px;
+  height: 50px;
+  text-align: right;
+  padding-right: 20px;
+}
+.shop_group_one_files_show{
+  width: 50px;
+  height: 50px;
+  line-height:50px;
+  border: 1px dashed #dddddd;
+  display: inline-block;
+  text-align: center;
+  float: left;
+}
+.shop_groups_two{
+  display: none;
+  margin-bottom: 20px;
+}
+.shop_groups_two>div{
   width: 396px;
   height: 18px;
   margin-bottom: 20px;
 }
-.shop_groups_one>div>span:first-child{
+.shop_groups_two>div>span:first-child{
   width: 85px;
   margin-right: 10px;
   font-size: 12px;
