@@ -98,19 +98,20 @@
   position: relative;
   width:288px;
   display: block;
+  border: 1px solid #fff;
   background: rgb(248,248,248);
   margin:5px 15px 15px 15px;
 }
 
 .shop_img_one{
-  width: 280px;
+  width: 288px;
 }
 .shop_img_one img{
   width:288px;
   height:193px;
 }
 .text_message_one{
-  width: 268px;
+  width: 270px;
   padding: 10px 10px 10px 10px;
   
 }
@@ -174,19 +175,21 @@
 }
 .container_two a{
   margin: 5px 3px;
-  width: 149px;  
+  /* width: 149px;   */
+  width: 100%;
   height: 100%;
-  border: 1px solid black;
+  border: 1px solid #ffffff;
 }
 .shop_img_two{
-  width: 149px;
+  width: 100%;
  position: relative; 
 }
 .container_two a img{
   width: 100%;
 }
 .text_message_two{
-  width: 149px;
+  /* width: 149px; */
+  width: 100%;
 }
 .title{
   margin:10px 10px 13px 10px;
@@ -227,7 +230,8 @@
   width: 100%;
 }
 .shop_img_three_one img{
-  width:304px;
+  /* width:304px; */
+  width: 100%;
   height:193px;
 }
 .text_message_three_one{
@@ -279,18 +283,20 @@
 }
 .container_three_two a{
   margin: 5px 3px;
-  width: 149px;  
+  width: 147px;  
   height: 100%;
 }
 .shop_img_three_two{
-  width: 149px;
+  /* width: 149px; */
+  width: 100%;
  position: relative; 
 }
 .container_three_two a img{
   width: 100%;
 }
 .text_message_three_two{
-  width: 149px;
+  /* width: 147px; */
+  width: 100%;
 }
 .title{
   margin:10px 10px 13px 10px;
@@ -332,7 +338,9 @@
 .shop_img_four{
   float: left;
    width: 118px;
-   height: 118px;
+ /*   height: 118px; */
+  /*  width: 100%; */
+   height: 100%;
    margin-right: 10px;
    position: relative;
 }
@@ -360,6 +368,7 @@
 .sub_title_four{
   font-size: 12px;
   margin-bottom: 8px;
+  display: none;
 }
 .price_four{
   position: absolute;
@@ -499,7 +508,6 @@ footer{
   position: absolute;
   left:400px;
   width:398px;
-  height:723px;
   background:#f8f8f8;
   padding: 12px 10px;
   border: 1px solid #f8f8f8; 
@@ -623,6 +631,12 @@ label span{
   margin: 0 2px;
   /* display: inline-block; */
 }
+.btn_style{
+  float: left;
+}
+.btn_style label{
+  width: 48px;
+}
 .shop_groups{
   margin-bottom: 20px;
   border: 1px solid #e5e5e5;
@@ -725,6 +739,11 @@ label span{
   width: 296px;
   display: inline-block;
 }
+.card{
+  float: left;
+  width: 96px;
+  display: none;
+}
 .control_card div span{
   width: 85px;
   margin-right: 10px;
@@ -746,5 +765,16 @@ label span{
 .shop_superscript_type{
   margin-left: 20px;
 }
-
-
+.superscript_style{
+  float: left;
+ 
+}
+.superscript_style>div{
+ 
+}
+.superscript_style>label{
+  width: 48px;
+}
+.files_show_container{
+  display: none;
+}
