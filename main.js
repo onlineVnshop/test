@@ -279,26 +279,114 @@
 		
 		// 显示内容
 		$(".content_show_list").on("click",".square",function(){
+			// console.log($(this));
 			if(!$(this).hasClass("cancle")){
-				$(this).addClass("cancle").parent().siblings().removeClass("cancle");
+				$(this).addClass("cancle");
 			}else{
 				$(this).removeClass("cancle");
 			};
-			if($(this).attr("state")==0){
-				$(".shop_introduction").show();
+			if($(".shop_introduction_container>div").hasClass("cancle")){
+				$(".shop_introduction").css("display","block");
 			}else{
-				$(".shop_introduction").hide();
+				$(".shop_introduction").css("display","none");
+			};
+			if($(".buy_btn>div").hasClass("cancle")){
+				$(".buy_btn_style").show();
+			}else{
+				$(".buy_btn_style").hide();
+			};
+			if($(".shop_superscript_container>div").hasClass("cancle")){
+				$(".shop_superscript_type").show();
+			}else{
+				$(".shop_superscript_type").hide();
 			}
 		
 		})
 		// 购买按钮样式
 		$(".buy_btn_style div").on("click",".big_circle",function(){
 			$(this).addClass("checked").parent().siblings().children().removeClass("checked");
+			if($(this).attr("btn")==0){
+				console.log(1)
+				$(".price_one i").html("1");
+				$(".price_two i").html("1");
+				$(".price_three_one i").html("1");
+				$(".price_three_two i").html("1");
+				$(".price_four span").html("1");
+				$(".price_five i").html("1");
+				$(".price_six i").html("1");
+			}else if($(this).attr("btn")==1){
+				console.log(2)
+				$(".price_one i").html("2");
+				$(".price_two i").html("2");
+				$(".price_three_one i").html("2");
+				$(".price_three_two i").html("2");
+				$(".price_four span").html("2");
+				$(".price_five i").html("2");
+				$(".price_six i").html("2");
+			}else if($(this).attr("btn")==2){
+				console.log(3)
+				$(".price_one i").html("3");
+				$(".price_two i").html("3");
+				$(".price_three_one i").html("3");
+				$(".price_three_two i").html("3");
+				$(".price_four span").html("3");
+				$(".price_five i").html("3");
+				$(".price_six i").html("3");
+			}else if($(this).attr("btn")==3){
+				console.log(4)
+				$(".price_one i").html("4");
+				$(".price_two i").html("4");
+				$(".price_three_one i").html("4");
+				$(".price_three_two i").html("4");
+				$(".price_four span").html("4");
+				$(".price_five i").html("1");
+				$(".price_six i").html("4");
+			}
 		})
 		// 商品角标
 		$(".shop_superscript_type div").on("click",".big_circle",function(){
 			$(this).addClass("checked").parent().siblings().children().removeClass("checked");
+			if($(this).attr("state")==0){
+				$(".icon_one").html("1");
+				$(".super_script_two i").html("1");
+				$(".icon_three_one i").html("1");
+				$(".super_script_three_two i").html("1");
+				$(".super_script_four i").html("1");
+				$(".super_script_five i").html("1");
+				$(".super_script_six i").html("1");
+			}else if($(this).attr("state")==1){
+				$(".icon_one").html("2");
+				$(".super_script_two i").html("2");
+				$(".icon_three_one i").html("2");
+				$(".super_script_three_two i").html("2");
+				$(".super_script_four i").html("2");
+				$(".super_script_five i").html("2");
+				$(".super_script_six i").html("2");
+			}else if($(this).attr("state")==2){
+				$(".icon_one").html("3");
+				$(".super_script_two i").html("3");
+				$(".icon_three_one i").html("3");
+				$(".super_script_three_two i").html("3");
+				$(".super_script_four i").html("3");
+				$(".super_script_five i").html("3");
+				$(".super_script_six i").html("3");
+			}else if($(this).attr("state")==3){
+				$(".icon_one").html("4");
+				$(".super_script_two i").html("4");
+				$(".icon_three_one i").html("4");
+				$(".super_script_three_two i").html("4");
+				$(".super_script_four i").html("4");
+				$(".super_script_five i").html("4");
+				$(".super_script_six i").html("4");
+			};
 			if($(this).attr("state")=="4"){
+				// $(".icon_one").html("4");
+				// $(".super_script_two i").html("4");
+				// $(".icon_three_one i").html("4");
+				// $(".super_script_three_two i").html("4");
+				// $(".super_script_four i").html("4");
+				// $(".super_script_five i").html("4");
+				// $(".super_script_six i").html("4");
 				$(".files_show_container").show();
 			}else{
 				$(".files_show_container").hide();
