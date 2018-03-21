@@ -1,12 +1,41 @@
   	
-  	// 保存操作变量
-  	var _this;
-      $(".shop").on("click",".box",function(){
-        _this=$(this);
-        console.log(_this);
-      });
-
+	  // 保存操作变量
+		  var _this;
+		  var id;
+  
+      $(".shop").on("click",".box",function(e){
+		//   console.log(e);
+		  _this=$(this);
+		//   console.log(_this.find(".box"))
+		  _this.find(".compentent_container").addClass("state");	
+	});
+	 if(!$(".compentent_container").hasClass("state")){
+		$(".shop").on("click",".box",function(e){
+			$(".shop_and_groups>div").eq(0).addClass("checked").siblings().removeClass("checked");
+			$(".list_style_content>div").eq(0).addClass("checked").siblings().removeClass("checked");
+			$(".control_card_fill>div").eq(0).addClass("checked").siblings().removeClass("checked");
+			$(".size_show>div").eq(0).addClass("checked").siblings().removeClass("checked")
+			$(".style_show_select>div>div").eq(0).addClass("checked").parent().parent().siblings().children().children().removeClass("checked")
+			$(".shop_superscript_type>div>div").eq(0).addClass("checked").siblings().removeClass("checked")
+			$(".shop_groups_one").css("display","block");
+			$(".shop_groups_two").css("display","none");
+			
+			$(".card").eq(0).show();
+			$(".card").eq(1).show();
+			$(".card").eq(2).hide();
+			$(".card").eq(3).show();
+			$(".card").eq(4).hide();
+			$(".buy_btn").show();
+			$(".buy_btn_style").show();
+		
+		
+		});  
+	}
+	
+	
 (function(){
+		
+		// console.log(str);
 		// 右侧弹框
 		$("section").on("click",".shop",function(){
 			// console.log($(".model"));
@@ -487,9 +516,10 @@
 			}else{
 				$(".files_show_container").hide();
 			}
-		})
+		});
+		
 })()
-	
+
 		
 	
 
