@@ -1,36 +1,31 @@
   	
 	  // 保存操作变量
 		  var _this;
-		  var id;
-  
-      $(".shop").on("click",".box",function(e){
-		//   console.log(e);
-		  _this=$(this);
-		//   console.log(_this.find(".box"))
-		  _this.find(".compentent_container").addClass("state");	
-	});
-	 if(!$(".compentent_container").hasClass("state")){
-		$(".shop").on("click",".box",function(e){
-			$(".shop_and_groups>div").eq(0).addClass("checked").siblings().removeClass("checked");
-			$(".list_style_content>div").eq(0).addClass("checked").siblings().removeClass("checked");
-			$(".control_card_fill>div").eq(0).addClass("checked").siblings().removeClass("checked");
-			$(".size_show>div").eq(0).addClass("checked").siblings().removeClass("checked")
-			$(".style_show_select>div>div").eq(0).addClass("checked").parent().parent().siblings().children().children().removeClass("checked")
-			$(".shop_superscript_type>div>div").eq(0).addClass("checked").siblings().removeClass("checked")
-			$(".shop_groups_one").css("display","block");
-			$(".shop_groups_two").css("display","none");
-			
-			$(".card").eq(0).show();
+      $(".shop").on("click",".box",function(e){		  
+		_this=$(this);
+		if(_this.attr("shop_name")==0&&_this.attr("list_style")==0&&_this.attr("fill")==0&&_this.attr("size")==0&&_this.attr("card")==0&&_this.attr("btn")==0&&_this.attr("surper_script")==0&&_this.attr("shop_name")==0&&_this.attr("shop_introduction")==0&&_this.attr("price")==0&&_this.attr("buy")==0&&_this.attr("icon")==0){
+     		$(".shop_and_groups div").eq(0).addClass("checked").siblings().removeClass("checked");
+     		$(".list_style_content div").eq(0).addClass("checked").siblings().removeClass("checked");
+    		$(".control_card_fill div").eq(0).addClass("checked").siblings().removeClass("checked");
+     		$(".size_show div").eq(0).addClass("checked").siblings().removeClass("checked");
+     		$(".style_show_select div>div").eq(0).addClass("checked").parent().siblings().children().removeClass("checked");
+			$(".buy_btn_style div>div").eq(0).addClass("checked").parent().siblings().children().removeClass("checked");
+     		$(".shop_superscript_type  div>div").eq(0).addClass("checked").parent().siblings().children().removeClass("checked");
+    		$(".content_show_list div .square").addClass("cancle")
+    		$(".card").eq(0).show();
 			$(".card").eq(1).show();
 			$(".card").eq(2).hide();
 			$(".card").eq(3).show();
 			$(".card").eq(4).hide();
+			$(".size_show").show();
 			$(".buy_btn").show();
 			$(".buy_btn_style").show();
+			$(".shop_groups_one").show();
+			$(".shop_groups_two").hide();
+			$(".shop_superscript_type ").show();
+    	}
+	});
 		
-		
-		});  
-	}
 	
 	
 (function(){
@@ -49,10 +44,12 @@
 			if($(this).attr("state")=="0"){
 				$(".shop_groups_one").css("display","block");
 				$(".shop_groups_two").css("display","none");
+				_this.attr("shop_from",0);
 			}else {
 				
 				$(".shop_groups_two").css("display","block");
 				$(".shop_groups_one").css("display","none");
+				_this.attr("shop_from",1);
 			}
 		});
 		// 列表样式转化默认样式
@@ -72,7 +69,9 @@
 			$(this).addClass("checked").siblings().removeClass("checked");
 			console.log($(this).attr("state"));
 			if($(this).attr("state")=="0") {				
-				_this.find(".compentent_container").html(shopComponents.shop_component_one);	
+				_this.attr("list_style",0);
+				_this.html(shopComponents.shop_component_one);	
+				
 				$(".card").eq(0).show();
 				$(".card").eq(1).show();
 				$(".card").eq(2).hide();
@@ -87,7 +86,9 @@
 				$(".buy_btn_style").show();
 				$(".shop_superscript_container").show();
 				}else if($(this).attr("state")=="1"){
-					_this.find(".compentent_container").html(shopComponents.shop_component_two);		
+					_this.attr("list_style",1);
+					_this.html(shopComponents.shop_component_two);		
+					
 					$(".card").eq(0).show();
 					$(".card").eq(1).show();
 					$(".card").eq(2).show();
@@ -101,7 +102,8 @@
 					$(".buy_btn").show();	
 					$(".shop_superscript_container").show();
 				}else if($(this).attr("state")=="2"){
-					_this.find(".compentent_container").html(shopComponents.shop_component_three);
+					_this.attr("list_style",2);
+					_this.html(shopComponents.shop_component_three);
 					$(".card").eq(0).show();
 					$(".card").eq(1).show();
 					$(".card").eq(2).hide();
@@ -114,7 +116,8 @@
 					$(".shop_price_container").show();
 					$(".shop_superscript_container").show();
 				}else if($(this).attr("state")=="3"){
-					_this.find(".compentent_container").html(shopComponents.shop_component_four);
+					_this.attr("list_style",3);
+					_this.html(shopComponents.shop_component_four);
 					$(".card").eq(0).show();
 					$(".card").eq(1).show();
 					$(".card").eq(2).hide();
@@ -127,7 +130,8 @@
 					$(".shop_price_container").hide();
 					$(".shop_superscript_container").show();
 				}else if($(this).attr("state")=="4"){
-					_this.find(".compentent_container").html(shopComponents.shop_component_five);
+					_this.attr("list_style",4);
+					_this.html(shopComponents.shop_component_five);
 					$(".card").eq(0).hide();
 					$(".card").eq(1).hide();
 					$(".card").eq(2).hide();
@@ -141,7 +145,8 @@
 					$(".buy_btn_style").hide();
 					$(".shop_superscript_container").show();
 				}else if($(this).attr("state")=="5"){
-					_this.find(".compentent_container").html(shopComponents.shop_component_six);
+					_this.attr("list_style",5);
+					_this.html(shopComponents.shop_component_six);
 					$(".card").eq(0).hide();
 					$(".card").eq(1).hide();
 					$(".card").eq(2).hide();
@@ -159,22 +164,39 @@
 		// 图片内容填充
 		$(".control_card_fill").on("click",".big_circle",function(){
 			$(this).addClass("checked").siblings().removeClass("checked");
+			if($(this).attr("state")=="0"){
+				_this.attr("fill",0);
+			}else{
+				_this.attr("fill",1);
+			}
 		})
 
 		// 显示比例
 		$(".size_show").on("click",".big_circle",function(){
 			$(this).addClass("checked").siblings().removeClass("checked");
 			if($(this).attr("state")=="0"){
+				_this.attr("size",0);
 				_this.find(".shop_img_one img").css("height","190px");
 			}else{
 				_this.find(".shop_img_one img").css("height","290px");
+				_this.attr("size",1);
 			}
 			
 		})
 
 		// 显示样式
 		$(".style_show_select div").on("click",".big_circle",function(){
-
+			if($(this).attr("card")==0){
+				_this.attr("card",0);
+			}else if($(this).attr("card")==1) {
+				_this.attr("card",1);
+			}else if($(this).attr("card")==2) {
+				_this.attr("card",2);
+			}else if($(this).attr("card")==3) {
+				_this.attr("card",3);
+			}else if($(this).attr("card")==4) {
+				_this.attr("card",4);
+			}
 			$(this).addClass("checked").parent().siblings().children().removeClass("checked");
 			console.log($(".little_picture").hasClass("checked"));
 			console.log(($(".little_picture").hasClass("checked")&&$(this).attr("card")==0));
@@ -288,6 +310,7 @@
 		
 		$(".style_show_select div").on("click",".big_circle",function(){
 			if($(".detail_list").hasClass("checked")){
+
 				if($(this).attr("card")==0){
 					$(".sub_title_four").css("display","none");
 					$(".container_four a").css({
@@ -317,24 +340,71 @@
 			}		
 
 		})
+
+
+
+
+		$(".shop_introduction").on("click",".square",function(){
+			if($(".shop_introduction div").hasClass("cancle")){
+					
+					_this.attr("shop_introduction",1);
+				}else{
+					_this.attr("shop_introduction",0);
+				}
+		})
+		$(".shop_price_container").on("click",".square",function(){
+			if($(".shop_price_container div").hasClass("cancle")){
+					
+					_this.attr("price",1);
+				}else{
+					_this.attr("price",0);
+				}
+		})
+		$(".buy_btn").on("click",".square",function(){
+			if($(".buy_btn div").hasClass("cancle")){
+					
+					_this.attr("buy",1);
+				}else{
+					_this.attr("buy",0);
+				}
+		})
+		$(".shop_superscript_container").on("click",".square",function(){
+			if($(".shop_superscript_container div").hasClass("cancle")){
+					
+					_this.attr("surper_script",1);
+				}else{
+					_this.attr("surper_script",0);
+				}
+		})
 		
 		// 显示内容
 		$(".content_show_list").on("click",".square",function(){
 			// console.log($(this));
 			if(!$(this).hasClass("cancle")){
 				$(this).addClass("cancle");
+				_this.attr("shop_name",0);
+				
 			}else{
 				$(this).removeClass("cancle");
+				_this.attr("shop_name",1);
 			};
+			if($(".shop_introduction div").hasClass("cancle")){
+					
+				}else{
+					
+				}
 			if($(".shop_introduction_container>div").hasClass("cancle")){
+				// _this.attr("shop_introduction",1);
 				$(".shop_introduction").css("display","block");
 				
 				_this.find(".text_message_one div h3").show();
 				// $(".text_message_one div p").show();
 				if($(".shop_introduction div").hasClass("cancle")){
+					
 					_this.find(".text_message_one div p").show();
 				}else{
 					_this.find(".text_message_one div p").hide();
+					
 				}
 				_this.find(".text_message_two h3").show();
 				_this.find(".text_message_three_one h3").show();
@@ -348,6 +418,7 @@
 				_this.find(".text_message_six h3").show();
 
 			}else{
+				
 				$(".shop_introduction").css("display","none");
 				_this.find(".text_message_one div h3").hide();
 				_this.find(".text_message_one div p").hide();
@@ -358,6 +429,7 @@
 				_this.find(".text_message_six h3").hide();
 			};
 			if($(".shop_price_container div").hasClass("cancle")){
+				
 				_this.find(".price_one span").show();
 				_this.find(".price_two span").show();
 				_this.find(".price_three_one span").show();
@@ -365,6 +437,7 @@
 				_this.find(".price_five em").show();
 				_this.find(".price_six em").show();
 			}else{
+				
 				_this.find(".price_one span").hide();
 				_this.find(".price_two span").hide();
 				_this.find(".price_three_one span").hide();
@@ -374,6 +447,7 @@
 				
 			};
 			if(!$(".buy_btn>div").hasClass("cancle")){
+				
 				_this.find(".price_one span").show();
 				_this.find(".text_message_one div h3").css("text-align","center");
 				_this.find(".text_message_two h3").css("text-align","center");
@@ -406,9 +480,12 @@
 				_this.find(".text_message_two p").css("text-align","center");
 				_this.find(".text_message_three_one p").css("text-align","center");
 				_this.find(".text_message_three_two p").css("text-align","center");
+			}else{
+				
 			}
 
 			if($(".buy_btn>div").hasClass("cancle")){
+				
 				$(".buy_btn_style").show();
 				_this.find(".price_one i").show();
 				_this.find(".price_two i").show();
@@ -417,7 +494,7 @@
 				_this.find(".price_five span").show();
 				_this.find(".price_six span").show();
 			}else{
-				$(".buy_btn_style").hide();
+								$(".buy_btn_style").hide();
 				$(".buy_btn_style").hide();
 				_this.find(".price_one i").hide();
 				_this.find(".price_two i").hide();
@@ -427,9 +504,11 @@
 				_this.find(".price_six span").hide();
 			};
 			if($(".shop_superscript_container>div").hasClass("cancle")){
+				
 				$(".shop_superscript_type").show();
 			}else{
 				$(".shop_superscript_type").hide();
+				
 			}
 		
 		})
@@ -437,6 +516,7 @@
 		$(".buy_btn_style div").on("click",".big_circle",function(){
 			$(this).addClass("checked").parent().siblings().children().removeClass("checked");
 			if($(this).attr("btn")==0){
+				_this.attr("btn",0);
 				console.log(1)
 				_this.find(".price_one i").html("1");
 				_this.find(".price_two i").html("1");
@@ -446,6 +526,7 @@
 				_this.find(".price_five i").html("1");
 				_this.find(".price_six i").html("1");
 			}else if($(this).attr("btn")==1){
+				_this.attr("btn",1);
 				console.log(2)
 				_this.find(".price_one i").html("2");
 				_this.find(".price_two i").html("2");
@@ -455,6 +536,7 @@
 				_this.find(".price_five i").html("2");
 				_this.find(".price_six i").html("2");
 			}else if($(this).attr("btn")==2){
+				_this.attr("btn",2);
 				console.log(3)
 				_this.find(".price_one i").html("3");
 				_this.find(".price_two i").html("3");
@@ -464,6 +546,7 @@
 				_this.find(".price_five i").html("3");
 				_this.find(".price_six i").html("3");
 			}else if($(this).attr("btn")==3){
+				_this.attr("btn",3);
 				console.log(4)
 				_this.find(".price_one i").html("4");
 				_this.find(".price_two i").html("4");
@@ -478,6 +561,7 @@
 		$(".shop_superscript_type div").on("click",".big_circle",function(){
 			$(this).addClass("checked").parent().siblings().children().removeClass("checked");
 			if($(this).attr("state")==0){
+				_this.attr("icon",0);
 				_this.find(".icon_one").html("1");
 				_this.find(".super_script_two i").html("1");
 				_this.find(".icon_three_one i").html("1");
@@ -486,6 +570,7 @@
 				_this.find(".super_script_five i").html("1");
 				_this.find(".super_script_six i").html("1");
 			}else if($(this).attr("state")==1){
+				_this.attr("icon",1);
 				_this.find(".icon_one").html("2");
 				_this.find(".super_script_two i").html("2");
 				_this.find(".icon_three_one i").html("2");
@@ -494,6 +579,7 @@
 				_this.find(".super_script_five i").html("2");
 				_this.find(".super_script_six i").html("2");
 			}else if($(this).attr("state")==2){
+				_this.attr("icon",2);
 				_this.find(".icon_one").html("3");
 				_this.find(".super_script_two i").html("3");
 				_this.find(".icon_three_one i").html("3");
@@ -502,6 +588,7 @@
 				_this.find(".super_script_five i").html("3");
 				_this.find(".super_script_six i").html("3");
 			}else if($(this).attr("state")==3){
+				_this.attr("icon",3);
 				_this.find(".icon_one").html("4");
 				_this.find(".super_script_two i").html("4");
 				_this.find(".icon_three_one i").html("4");
@@ -511,10 +598,11 @@
 				_this.find(".super_script_six i").html("4");
 			};
 			if($(this).attr("state")=="4"){
-				
+				_this.attr("icon",4);
 				$(".files_show_container").show();
 			}else{
 				$(".files_show_container").hide();
+		
 			}
 		});
 		

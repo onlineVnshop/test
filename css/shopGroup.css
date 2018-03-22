@@ -13,6 +13,7 @@
     /* height:100%; */
     border: 1px solid black;
     margin:2px;
+    position: relative;
    
 }
 #header{
@@ -199,8 +200,8 @@ footer{
   background-color: #f8f8f8;
   font-size: 12px;
   position: absolute;
-  top: 10%;
-  left: 40%;
+  top: 0%;
+  left: 100%;
 }
 .design_editor::before{
   content: "";
@@ -236,4 +237,32 @@ footer{
   text-decoration: none;
   cursor: pointer;
 }
+.design_editor_control_groups{
+  margin-bottom: 20px;
+}
+.design_editor_control_groups_container{
+  display: flex;
+  align-items: center;
+}
+.design_editor_control_groups_container_label{
+  font-size: 12px;
+  width: 85px;
+  flex-shrink: 0;
+  text-align: right;
+  margin-right: 10px;
+}
+.design_editor_control_groups_container_control{
+  flex-grow: 1;
 
+}
+.design_container_control_groups_radio{
+  display: inline-block;
+  font-size: 12px;
+}
+.top_menu{
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 14px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
