@@ -290,7 +290,33 @@ footer{
   left: 4px;
   top: 4px;
 }
-.top_menu{
+/* 单选结束 */
+/* 多选start */
+.square{
+  width: 12px;
+  height: 12px;
+  border: 1px solid #bbbbbb;
+  background: #ffffff;
+  display: inline-block;
+  border: 1px solid #bbbbbb;
+  font-size: 12px;
+  text-align: center;
+  line-height: 12px;
+  color: white;
+}
+.cancle{
+  width: 12px;
+  height: 12px;
+  border: 1px solid #bbbbbb;
+  background: #3388ff; 
+  display: inline-block;
+  border: 1px solid #bbbbbb;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+}
+/* 多选end */
+.radio_checked{
   cursor: pointer;
   font-weight: 400;
   line-height: 14px;
@@ -298,26 +324,77 @@ footer{
   vertical-align: middle;
   display: inline-block;
 }
-.left_menu{
+
+.radio_checked span {
+    margin-left: 5px;
+    margin-right: 5px;
+    vertical-align: middle;
+    line-height: 14px;
+}
+.design_editor_card{
+  position: relative;
+}
+.design_editor_card_add{
+  display: flex;
+  -moz-box-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background: #fff;
+  margin:10px 0;
+  padding:10px;
+  border:1px dashed #e5e5e5;
   cursor: pointer;
-  display: inline-block;
-  font-weight: 400;
-  line-height: 14px;
-  vertical-align: middle;
-  display: inline-block;
+  color: #38f;
 }
-.top_menu span {
-    margin-left: 5px;
-    margin-right: 5px;
-    vertical-align: middle;
-    line-height: 14px;
+.design_editor_card_add_icon{
+  vertical-align: baseline;
+  text-align: center;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  font-style: normal;
+  text-decoration: inherit;
+  font-variant: normal;
+  margin-right: 10px;
+  color: #38f;
 }
-.left_menu span{
-    margin-left: 5px;
-    margin-right: 5px;
-    vertical-align: middle;
-    line-height: 14px;
+.design_editor_control_help_desc{
+  margin-top:10px;
 }
-.add_control_groups{
+.design_editor_control_group{
   margin-bottom: 20px;
+}
+.design_editor_control_group_container{
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.design_editor_control_group_label{
+  font-size:12px;
+  flex-shrink: 0;
+  text-align: right;
+  margin-right: 10px;
+  width: 85px;
+}
+.design_editor_control_group_control{
+  -webkit-box-flex: 1;
+  -ms-box-flex:1;
+  flex-grow: 1
+}
+.radio_group{
+  display: inline-block;
+  font-size: 12px;
+}
+.control_card{
+  padding:10px 0;
+  border:1px solid #e5e5e5;
+  background: #fff;
+}
+.control_group_label_top{
+  align-self: flex-start;
+}
+.no_btm{
+  margin-bottom: 0px;
+}
+.cd_adjust{
+  padding-left:16px;
 }
