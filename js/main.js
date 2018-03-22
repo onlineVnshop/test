@@ -3,28 +3,120 @@
 		  var _this;
       $(".shop").on("click",".box",function(e){		  
 		_this=$(this);
-		if(_this.attr("shop_name")==0&&_this.attr("list_style")==0&&_this.attr("fill")==0&&_this.attr("size")==0&&_this.attr("card")==0&&_this.attr("btn")==0&&_this.attr("surper_script")==0&&_this.attr("shop_name")==0&&_this.attr("shop_introduction")==0&&_this.attr("price")==0&&_this.attr("buy")==0&&_this.attr("icon")==0){
-     		$(".shop_and_groups div").eq(0).addClass("checked").siblings().removeClass("checked");
-     		$(".list_style_content div").eq(0).addClass("checked").siblings().removeClass("checked");
-    		$(".control_card_fill div").eq(0).addClass("checked").siblings().removeClass("checked");
-     		$(".size_show div").eq(0).addClass("checked").siblings().removeClass("checked");
-     		$(".style_show_select div>div").eq(0).addClass("checked").parent().siblings().children().removeClass("checked");
-			$(".buy_btn_style div>div").eq(0).addClass("checked").parent().siblings().children().removeClass("checked");
-     		$(".shop_superscript_type  div>div").eq(0).addClass("checked").parent().siblings().children().removeClass("checked");
-    		$(".content_show_list div .square").addClass("cancle")
-    		$(".card").eq(0).show();
-			$(".card").eq(1).show();
-			$(".card").eq(2).hide();
-			$(".card").eq(3).show();
-			$(".card").eq(4).hide();
-			$(".size_show").show();
-			$(".buy_btn").show();
-			$(".buy_btn_style").show();
-			$(".shop_groups_one").show();
-			$(".shop_groups_two").hide();
-			$(".shop_superscript_type ").show();
+		
+			// 重新渲染商品分组    	
+    	if(_this.attr("shop_from")==0){
+    		console.log();
+    		$(".shop_and_groups>div").removeClass("checked").eq(0).addClass("checked");
+    	}else if (_this.attr("shop_from")==1) {
+    		console.log(12223)
+    		$(".shop_and_groups>div").removeClass("checked").eq(1).addClass("checked");
+    	};
+
+    	// 重新渲染列表样式
+    	console.log(_this.attr("list_style"))
+    	if(_this.attr("list_style")==0){
+    		$(".list_style_content>div").removeClass("checked").eq(0).addClass("checked");
+    	}else if (_this.attr("list_style")==1) {
+    		$(".list_style_content>div").removeClass("checked").eq(1).addClass("checked");
+    	
+    	}else if (_this.attr("list_style")==2) {
+    		$(".list_style_content div").removeClass("checked").eq(2).addClass("checked");
+    	
+    	}else if (_this.attr("list_style")==3) {
+    		$(".list_style_content>div").removeClass("checked").eq(3).addClass("checked");
+    	
+    	}else if (_this.attr("list_style")==4) {
+    		$(".list_style_content>div").removeClass("checked").eq(4).addClass("checked");
+    	
+    	}else if (_this.attr("list_style")==5) {
+    		$(".list_style_content>div").removeClass("checked").eq(5).addClass("checked");
+    	
     	}
+    	// 显示比例
+    	if(_this.attr("size")==0){
+    		console.log();
+    		$(".size_show>div").removeClass("checked").eq(0).addClass("checked");
+    	}else if (_this.attr("size")==1) {
+    		console.log(12223)
+    		$(".size_show>div").removeClass("checked").eq(1).addClass("checked");
+    	};
+
+    	// // 重新渲染图片填充
+    	if(_this.attr("fill")==0){
+    		$(".control_card_fill>div").removeClass("checked").eq(0).addClass("checked");
+    	}else if (_this.attr("fill")==1) {
+    		$(".control_card_fill>div").removeClass("checked").eq(1).addClass("checked");
+    	};
+    	// 显示样式
+    	console.log($(".style_show_select>div").children())
+    	if(_this.attr("list_style")==0){
+    		$(".style_show_select").find(".big_circle").removeClass("checked").eq(0).addClass("checked");
+    	}else if (_this.attr("list_style")==1) {
+    	$(".style_show_select").find(".big_circle").removeClass("checked").eq(1).addClass("checked")
+    	
+    	}else if (_this.attr("list_style")==2) {
+    		$(".style_show_select").find(".big_circle").removeClass("checked").eq(2).addClass("checked")
+    	
+    	}else if (_this.attr("list_style")==3) {
+    		$(".style_show_select").find(".big_circle").removeClass("checked").eq(3).addClass("checked")
+    	
+    	}else if (_this.attr("list_style")==4) {
+    		$(".style_show_select").find(".big_circle").removeClass("checked").eq(4).addClass("checked")
+    	}else if (_this.attr("list_style")==5) {
+    	$(".style_show_select").find(".big_circle").removeClass("checked").eq(5).addClass("checked")
+    	
+    	}
+    	if(_this.attr("btn")==0){
+    		$(".buy_btn_style").find(".big_circle").removeClass("checked").eq(0).addClass("checked")
+    	}else if (_this.attr("btn")==1) {
+    		$(".buy_btn_style").find(".big_circle").removeClass("checked").eq(1).addClass("checked")
+    	}else if (_this.attr("btn")==2) {
+    		$(".buy_btn_style").find(".big_circle").removeClass("checked").eq(2).addClass("checked")
+    	}else if (_this.attr("btn")==3) {
+    		$(".buy_btn_style").find(".big_circle").removeClass("checked").eq(3).addClass("checked")
+    	}
+    	// j角标
+    	if(_this.attr("icon")==0){
+    		$(".shop_superscript_type").find(".big_circle").removeClass("checked").eq(0).addClass("checked")
+    	}else if (_this.attr("btn")==1) {
+    		$(".shop_superscript_type").find(".big_circle").removeClass("checked").eq(1).addClass("checked")
+    	}else if (_this.attr("btn")==2) {
+    		$(".shop_superscript_type").find(".big_circle").removeClass("checked").eq(2).addClass("checked")
+    	}else if (_this.attr("btn")==3) {
+    		$(".shop_superscript_type").find(".big_circle").removeClass("checked").eq(3).addClass("checked")
+    	}else if (_this.attr("btn")==4) {
+    		$(".shop_superscript_type").find(".big_circle").removeClass("checked").eq(4).addClass("checked")
+    	}
+    	// 多选
+    	if(_this.attr("shop_from")==0){
+    		$(".shop_introduction_container").find(".square").addClass("cancle")
+    	}else if(_this.attr("shop_from")==1){
+    		$(".shop_introduction_container").find(".square").removeClass("cancle")
+    	}
+    	if(_this.attr("price")==0){
+    		$(".shop_price_container").find(".square").addClass("cancle")
+    	}else if(_this.attr("price")==1){
+    		$(".shop_price_container").find(".square").removeClass("cancle")
+    	}
+    	if(_this.attr("buy")==0){
+    		$(".buy_btn").find(".square").addClass("cancle")
+    	}else if(_this.attr("buy")==1){
+    		$(".buy_btn").find(".square").removeClass("cancle")
+    	}
+    	if(_this.attr("shop_introction")==0){
+    		$(".shop_introduction").find(".square").addClass("cancle")
+    	}else if(_this.attr("shop_from")==1){
+    		$(".shop_introduction").find(".square").removeClass("cancle")
+    	}
+    	if(_this.attr("syuper_script")==0){
+    		$(".shop_superscript_container").find(".square").addClass("cancle")
+    	}else if(_this.attr("syuper_script")==1){
+    		$(".shop_superscript_container").find(".square").removeClass("cancle")
+    	}
+		
 	});
+      				
 		
 	
 	
@@ -388,11 +480,7 @@
 				$(this).removeClass("cancle");
 				_this.attr("shop_name",1);
 			};
-			if($(".shop_introduction div").hasClass("cancle")){
-					
-				}else{
-					
-				}
+			
 			if($(".shop_introduction_container>div").hasClass("cancle")){
 				// _this.attr("shop_introduction",1);
 				$(".shop_introduction").css("display","block");
