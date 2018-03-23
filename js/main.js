@@ -1,136 +1,17 @@
   	
-	  // 保存操作变量
-		  var _this;
-      $(".shop").on("click",".box",function(e){		  
-		_this=$(this);
-		
-			// 重新渲染商品分组    	
-    	if(_this.attr("shop_from")==0){
-    		console.log();
-    		$(".shop_and_groups>div").removeClass("checked").eq(0).addClass("checked");
-    	}else if (_this.attr("shop_from")==1) {
-    		console.log(12223)
-    		$(".shop_and_groups>div").removeClass("checked").eq(1).addClass("checked");
-    	};
-
-    	// 重新渲染列表样式
-    	console.log(_this.attr("list_style"))
-    	if(_this.attr("list_style")==0){
-    		$(".list_style_content>div").removeClass("checked").eq(0).addClass("checked");
-    	}else if (_this.attr("list_style")==1) {
-    		$(".list_style_content>div").removeClass("checked").eq(1).addClass("checked");
-    	
-    	}else if (_this.attr("list_style")==2) {
-    		$(".list_style_content div").removeClass("checked").eq(2).addClass("checked");
-    	
-    	}else if (_this.attr("list_style")==3) {
-    		$(".list_style_content>div").removeClass("checked").eq(3).addClass("checked");
-    	
-    	}else if (_this.attr("list_style")==4) {
-    		$(".list_style_content>div").removeClass("checked").eq(4).addClass("checked");
-    	
-    	}else if (_this.attr("list_style")==5) {
-    		$(".list_style_content>div").removeClass("checked").eq(5).addClass("checked");
-    	
-    	}
-    	// 显示比例
-    	if(_this.attr("size")==0){
-    		console.log();
-    		$(".size_show>div").removeClass("checked").eq(0).addClass("checked");
-    	}else if (_this.attr("size")==1) {
-    		console.log(12223)
-    		$(".size_show>div").removeClass("checked").eq(1).addClass("checked");
-    	};
-
-    	// // 重新渲染图片填充
-    	if(_this.attr("fill")==0){
-    		$(".control_card_fill>div").removeClass("checked").eq(0).addClass("checked");
-    	}else if (_this.attr("fill")==1) {
-    		$(".control_card_fill>div").removeClass("checked").eq(1).addClass("checked");
-    	};
-    	// 显示样式
-    	console.log($(".style_show_select>div").children())
-    	if(_this.attr("list_style")==0){
-    		$(".style_show_select").find(".big_circle").removeClass("checked").eq(0).addClass("checked");
-    	}else if (_this.attr("list_style")==1) {
-    	$(".style_show_select").find(".big_circle").removeClass("checked").eq(1).addClass("checked")
-    	
-    	}else if (_this.attr("list_style")==2) {
-    		$(".style_show_select").find(".big_circle").removeClass("checked").eq(2).addClass("checked")
-    	
-    	}else if (_this.attr("list_style")==3) {
-    		$(".style_show_select").find(".big_circle").removeClass("checked").eq(3).addClass("checked")
-    	
-    	}else if (_this.attr("list_style")==4) {
-    		$(".style_show_select").find(".big_circle").removeClass("checked").eq(4).addClass("checked")
-    	}else if (_this.attr("list_style")==5) {
-    	$(".style_show_select").find(".big_circle").removeClass("checked").eq(5).addClass("checked")
-    	
-    	}
-    	if(_this.attr("btn")==0){
-    		$(".buy_btn_style").find(".big_circle").removeClass("checked").eq(0).addClass("checked")
-    	}else if (_this.attr("btn")==1) {
-    		$(".buy_btn_style").find(".big_circle").removeClass("checked").eq(1).addClass("checked")
-    	}else if (_this.attr("btn")==2) {
-    		$(".buy_btn_style").find(".big_circle").removeClass("checked").eq(2).addClass("checked")
-    	}else if (_this.attr("btn")==3) {
-    		$(".buy_btn_style").find(".big_circle").removeClass("checked").eq(3).addClass("checked")
-    	}
-    	// j角标
-    	if(_this.attr("icon")==0){
-    		$(".shop_superscript_type").find(".big_circle").removeClass("checked").eq(0).addClass("checked")
-    	}else if (_this.attr("btn")==1) {
-    		$(".shop_superscript_type").find(".big_circle").removeClass("checked").eq(1).addClass("checked")
-    	}else if (_this.attr("btn")==2) {
-    		$(".shop_superscript_type").find(".big_circle").removeClass("checked").eq(2).addClass("checked")
-    	}else if (_this.attr("btn")==3) {
-    		$(".shop_superscript_type").find(".big_circle").removeClass("checked").eq(3).addClass("checked")
-    	}else if (_this.attr("btn")==4) {
-    		$(".shop_superscript_type").find(".big_circle").removeClass("checked").eq(4).addClass("checked")
-    	}
-    	// 多选
-    	if(_this.attr("shop_from")==0){
-    		$(".shop_introduction_container").find(".square").addClass("cancle")
-    	}else if(_this.attr("shop_from")==1){
-    		$(".shop_introduction_container").find(".square").removeClass("cancle")
-    	}
-    	if(_this.attr("price")==0){
-    		$(".shop_price_container").find(".square").addClass("cancle")
-    	}else if(_this.attr("price")==1){
-    		$(".shop_price_container").find(".square").removeClass("cancle")
-    	}
-    	if(_this.attr("buy")==0){
-    		$(".buy_btn").find(".square").addClass("cancle")
-    	}else if(_this.attr("buy")==1){
-    		$(".buy_btn").find(".square").removeClass("cancle")
-    	}
-    	if(_this.attr("shop_introction")==0){
-    		$(".shop_introduction").find(".square").addClass("cancle")
-    	}else if(_this.attr("shop_from")==1){
-    		$(".shop_introduction").find(".square").removeClass("cancle")
-    	}
-    	if(_this.attr("syuper_script")==0){
-    		$(".shop_superscript_container").find(".square").addClass("cancle")
-    	}else if(_this.attr("syuper_script")==1){
-    		$(".shop_superscript_container").find(".square").removeClass("cancle")
-    	}
-		
-	});
-      				
-		
-	
-	
+// 保存操作变量
+ var _this;
 (function(){
 		
-		// console.log(str);
+		
 		// 右侧弹框
 		$("section").on("click",".shop",function(){
-			// console.log($(".model"));
+			
 			$("#model").css("display","block");
 		})
 		//切换商品和商品分组 
 		$(".shop_and_groups").on("click",".big_circle",function(){
-			// _this.find(".price_one span").css("color","green");
+			
 			
 			$(this).addClass("checked").siblings().removeClass("checked");
 			if($(this).attr("state")=="0"){
@@ -471,7 +352,6 @@
 		
 		// 显示内容
 		$(".content_show_list").on("click",".square",function(){
-			// console.log($(this));
 			if(!$(this).hasClass("cancle")){
 				$(this).addClass("cancle");
 				_this.attr("shop_name",0);
@@ -550,7 +430,6 @@
 				_this.find(".price_two span").css({
 					"text-align":"center",
 					"display":"block",
-					// "margin":"0 auto",
 					"margin-left":"-7%"
 				});
 				_this.find(".price_three_one span").css({
@@ -694,6 +573,132 @@
 			}
 		});
 		
+		// 封装重新渲染：
+		function resetToolShop(_this) {
+			
+		
+			// 重新渲染商品分组    	
+    	if(_this.attr("shop_from")==0){
+    		console.log();
+    		$(".shop_and_groups>div").removeClass("checked").eq(0).addClass("checked");
+    	}else if (_this.attr("shop_from")==1) {
+    		console.log(12223)
+    		$(".shop_and_groups>div").removeClass("checked").eq(1).addClass("checked");
+    	};
+
+    	// 重新渲染列表样式
+    	console.log(_this.attr("list_style"))
+    	if(_this.attr("list_style")==0){
+    		$(".list_type").removeClass("checked").eq(0).addClass("checked");
+    	}else if (_this.attr("list_style")==1) {
+    		$(".list_type").removeClass("checked").eq(1).addClass("checked");
+    	}else if (_this.attr("list_style")==2) {
+    		$(".list_type").removeClass("checked").eq(2).addClass("checked");
+    	
+    	}else if (_this.attr("list_style")==3) {
+    		$(".list_type").removeClass("checked").eq(3).addClass("checked");
+    	
+    	}else if (_this.attr("list_style")==4) {
+    		$(".list_type").removeClass("checked").eq(4).addClass("checked");
+    	
+    	}else if (_this.attr("list_style")==5) {
+    		$(".list_type").removeClass("checked").eq(5).addClass("checked");
+    	
+    	}
+    	// 显示比例
+    	if(_this.attr("size")==0){
+    		console.log();
+    		$(".size_show>div").removeClass("checked").eq(0).addClass("checked");
+    	}else if (_this.attr("size")==1) {
+    		console.log(12223)
+    		$(".size_show>div").removeClass("checked").eq(1).addClass("checked");
+    	};
+
+    	// // 重新渲染图片填充
+    	if(_this.attr("fill")==0){
+    		$(".control_card_fill>div").removeClass("checked").eq(0).addClass("checked");
+    	}else if (_this.attr("fill")==1) {
+    		$(".control_card_fill>div").removeClass("checked").eq(1).addClass("checked");
+    	};
+    	// 显示样式
+    	
+    	console.log($(".card_style").eq(2).addClass("checked").removeClass("checked"))
+    	if(_this.attr("card")==0){
+    		$(".card_style").removeClass("checked").eq(0).addClass("checked");
+    	}else if(_this.attr("card")==1) {
+    		$(".card_style").removeClass("checked").eq(1).addClass("checked");
+    	
+    	}else if(_this.attr("card")==2) {
+    		$(".card_style").removeClass("checked").eq(2).addClass("checked");
+    	
+    	}else if (_this.attr("card")==3) {
+    		$(".card_style").removeClass("checked").eq(3).addClass("checked");
+    	
+    	}else if (_this.attr("card_style")==4) {
+    		$(".card_style").removeClass("checked").eq(4).addClass("checked");
+    	}else if (_this.attr("card")==5) {
+    		$(".card_style").removeClass("checked").eq(5).addClass("checked");
+    	
+    	}
+    	// 购买按钮单选
+    	if(_this.attr("btn")==0){
+    		$(".buy_btn_style").find(".big_circle").removeClass("checked").eq(0).addClass("checked")
+    	}else if (_this.attr("btn")==1) {
+    		$(".buy_btn_style").find(".big_circle").removeClass("checked").eq(1).addClass("checked")
+    	}else if (_this.attr("btn")==2) {
+    		$(".buy_btn_style").find(".big_circle").removeClass("checked").eq(2).addClass("checked")
+    	}else if (_this.attr("btn")==3) {
+    		$(".buy_btn_style").find(".big_circle").removeClass("checked").eq(3).addClass("checked")
+    	}
+    	// j角标
+    	if(_this.attr("icon")==0){
+    		$(".icon").removeClass("checked").eq(0).addClass("checked").siblings()
+    	}else if (_this.attr("icon")==1) {
+    		$(".icon").removeClass("checked").eq(1).addClass("checked").siblings();
+    	}else if (_this.attr("icon")==2) {
+    		$(".icon").removeClass("checked").eq(2).addClass("checked").siblings();
+    	}else if (_this.attr("icon")==3) {
+    		$(".icon").removeClass("checked").eq(3).addClass("checked").siblings();
+    	}else if (_this.attr("icon")==4) {
+    		$(".icon").removeClass("checked").eq(4).addClass("checked").siblings();
+    	}
+    	// 多选start
+    	// 商品
+    	if(_this.attr("shop_name")==0){
+    		$(".shop_name").addClass("cancle");
+    	}else if(_this.attr("shop_name")==1){
+    		$(".shop_name").removeClass("cancle");
+    	}
+    	// 商品介绍
+    	if(_this.attr("shop_introduction")==0){
+    		$(".shop_introduction").find(".square").addClass("cancle")
+    	}else if(_this.attr("shop_introduction")==1){
+    		$(".shop_introduction").find(".square").removeClass("cancle")
+    	}
+		// 价格
+    	if(_this.attr("price")==0){
+    		$(".shop_price_container").find(".square").addClass("cancle")
+    	}else if(_this.attr("price")==1){
+    		$(".shop_price_container").find(".square").removeClass("cancle")
+    	}
+    	// 购买按钮
+    	if(_this.attr("buy")==0){
+    		$(".buy").addClass("cancle")
+    	}else if(_this.attr("buy")==1){
+    		$(".buy").removeClass("cancle")
+    	}
+    	// 角标；
+    	if(_this.attr("surper_script")==0){
+    		$(".shop_superscript_container").find(".square").addClass("cancle")
+    	}else if(_this.attr("surper_script")==1){
+    		$(".shop_superscript_container").find(".square").removeClass("cancle")
+    	}
+    	// 多选end		
+		}
+		$(".shop").on("click",".box",function(e){		  
+			_this=$(this);
+			resetToolShop(_this);
+		});		
 })()
 
 		

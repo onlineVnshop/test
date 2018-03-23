@@ -20,7 +20,20 @@
         </div>
         <section>
             <div class="shop">
-              <div class="box" shop_from=0 list_style=0 fill=0 size=0 card=0 btn=0 surper_script=0 shop_name=0 shop_introduction=0 price=0 buy=0 icon=0>
+              <div class="box" 
+              data_type=tool_Shop_compontent
+              shop_from=0
+              list_style=0
+              fill=0 
+              size=0 
+              card=0 
+              btn=0 
+              surper_script=0 
+              shop_name=0 
+              shop_introduction=0 
+              price=0
+              buy=0 
+              icon=0>
               
               </div>
             </div>
@@ -29,7 +42,7 @@
 
         </footer>
     </div>
-    <div id="model">
+    <div id="model" class="tool_Shop_compontent">
         <div>
           <div class="shop_text">商品</div>
           <div class="shop_home">
@@ -70,32 +83,32 @@
         <div class="list_style">
             <span>列表样式:</span>
             <div class="list_style_content">
-                <div class="big_circle checked " state=0>
+                <div class="big_circle list_type checked " state=0>
                      <div class="little_circle"></div>
                 </div>
                 <label for="big_picture">大图</label>
 
-                <div class="big_circle little_picture" state=1>
+                <div class="big_circle little_picture list_type" state=1>
                     <div class="little_circle"></div>
                 </div>
                 <label for="little_picture">小图</label>
 
-                <div class="big_circle big_little_picture" state=2>
+                <div class="big_circle big_little_picture list_type" state=2>
                   <div class="little_circle"></div>
                 </div>
-                <label for="big_little_picture">一大两小</label>
+                <label for="big_little_picture list_type">一大两小</label>
 
-                <div class="big_circle detail_list" state=3>
+                <div class="big_circle detail_list list_type" state=3>
                   <div class="little_circle"></div>
                 </div>
                 <label for="detail_list">详情列表</label>
 
-                <div class="big_circle three_picture" state=4>
+                <div class="big_circle three_picture list_type" state=4>
                   <div class="little_circle"></div>
                 </div>
                 <label for="three_picture">一行三个</label>
 
-                <div class="big_circle" state=5>
+                <div class="big_circle list_type" state=5>
                   <div class="little_circle"></div>
                 </div>
                 <label for="cross_slip">横向滑动</label>
@@ -128,35 +141,35 @@
                 <span>显示样式:</span>
                 <div class="style_show_select" >
                   <div class="card">
-                    <div class="big_circle checked" card=0>
+                    <div class="big_circle card_style checked" card=0>
                       <div class="little_circle"></div>
                     </div>
                     <label for="card_one">卡片1</label>
                   </div>
 
                   <div class="card" >
-                    <div class="big_circle" card=1>
+                    <div class="big_circle card_style" card=1>
                       <div class="little_circle"></div>
                     </div>
                     <label for="card_two">卡片2</label>
                   </div>
             
                   <div class="card">
-                    <div class="big_circle"  card=2>
+                    <div class="big_circle card_style"  card=2>
                       <div class="little_circle"></div>
                     </div>
                     <label for="pinterest">瀑布流</label>
                   </div>
 
                   <div class="card">
-                    <div class="big_circle" card=3>
+                    <div class="big_circle card_style" card=3>
                       <div class="little_circle"></div>
                     </div>
                     <label for="card_easy">极简</label>
                   </div>
 
                   <div class="card">
-                    <div class="big_circle"  card=4>
+                    <div class="big_circle  card_style"  card=4>
                       <div class="little_circle"></div>
                     </div>
                     <label for="sales_promotion">促销</label>
@@ -167,7 +180,7 @@
                <span>显示内容:</span>
                <div class="content_show_list">
                   <div class="shop_introduction_container">
-                        <div class="square cancle" state=0>
+                        <div class="square cancle shop_name" state=0>
                         √
                         </div>
                         <label for="shop_name">商品名称</label><br>
@@ -181,7 +194,7 @@
                         <label for="shop_price">商品价格</label>
                   </div>
                   <div class="buy_btn">
-                        <div class="square cancle" state=2>√</div>
+                        <div class="square buy cancle" state=2>√</div>
                         <label for="buy_btn">购买按钮</label><br>
                         <div class="buy_btn_style">
                             <div class="btn_style">
@@ -192,7 +205,7 @@
                             </div>
                               
                             <div class="btn_style">
-                              <div class="big_circle " btn=1>
+                              <div class="big_circle" btn=1>
                                 <div class="little_circle"></div>
                               </div>
                               <label for="btn_style_two">样式2</label>
@@ -206,7 +219,7 @@
                             </div>
                               
                             <div class="btn_style">
-                              <div class="big_circle"btn=3>
+                              <div class="big_circle" btn=3>
                                 <div class="little_circle"></div>
                               </div>
                               <label for="btn_style_four">样式4</label>
@@ -223,34 +236,34 @@
                         <label for="shop_superscript">商品角标</label>
                         <div class="shop_superscript_type clearfloat">
                           <div class="superscript_style">
-                            <div class="big_circle checked" state=0>
+                            <div class="big_circle icon checked" state=0>
                               <div class="little_circle"></div>
                             </div>
                             <label for="new_shop">新品</label>
                           </div>
 
                           <div class="superscript_style" >
-                            <div class="big_circle" state=1>
+                            <div class="big_circle  icon " state=1>
                               <div class="little_circle"></div>
                             </div>
                             <label for="card_two">卡片2</label>
                           </div>
 
                           <div class="superscript_style">
-                            <div class="big_circle"  state=2>
+                            <div class="big_circle icon "  state=2>
                               <div class="little_circle"></div>
                             </div>
                             <label for="new">NEW</label>
                           </div>
 
                           <div class="superscript_style">
-                            <div class="big_circle" state=3>
+                            <div class="big_circle icon " state=3>
                               <div class="little_circle"></div>
                             </div>
                             <label for="hot">HOT</label><br>
                           </div>
                           <div class="user_undefined_container">
-                            <div class="big_circle"  state=4>
+                            <div class="big_circle icon "  state=4>
                               <div class="little_circle"></div>
                             </div>
                             <label for="user_undefined">自定义</label>
