@@ -7,6 +7,7 @@ $(".box").clone().prependTo(".shops_group");
 $(".shops_group").on("click",".box",function(){
     _this=$(this);
     // console.log(_this);
+        $(".design_editor_item").hide();
         _this.find(".design_editor_item").show();
 // 文本同步
     $(".input_wrapper").on("keyup",".input_value",function(){

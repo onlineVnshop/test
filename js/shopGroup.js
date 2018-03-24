@@ -1,6 +1,6 @@
 // 保存变量
 var _this; 
-// $(".box").clone().prependTo(".shops_group");
+$(".box").clone().prependTo(".shops_group");
 // 显示样式初始化
 $(".showState").eq(0).show();
 $(".showState").eq(1).show();
@@ -13,6 +13,7 @@ $(".compontent_container_container").html(shopComponents.shop_groups_compontent_
 $(".shops_group").on("click",".box",function(){
     _this=$(this);
     // console.log(_this);
+        $(".design_editor").hide();
         _this.find(".design_editor").show();
     // x选择模板
   $(".selectState").on("click",".big_circle",function(e){
@@ -159,7 +160,7 @@ $(".shops_group").on("click",".box",function(){
                 $(".shopping_btn").show();
                 $(".goods_name").show();
                 $(".goods_introduction").hide();
-                $(".shopping_btn_style").hide();
+                $(".shopping_btn_style").show();
                 $(".goods_price").show();
                 $(".card_style").removeClass("checked").eq(3).addClass("checked");
             }else if($this.parent().attr("listState")==5){
@@ -174,7 +175,7 @@ $(".shops_group").on("click",".box",function(){
                 $(".shopping_btn").show();
                 $(".goods_name").show();
                 $(".goods_introduction").hide();
-                $(".shopping_btn_style").hide();
+                $(".shopping_btn_style").show();
                 $(".goods_price").show();
                 $(".card_style").removeClass("checked").eq(3).addClass("checked");
             }  
@@ -229,15 +230,32 @@ $(".shops_group").on("click",".box",function(){
                     "left":"0%",
                 });
                 // 小图
-                $(".content_container_list_small_list a").css({
+                _this.find(".content_container_list_small_list a").css({
                     "margin":"4px 2px",
                     "border":"1px solid transparent"
                 })
-                $(".content_container_list_small_and_big_list a").css({
+                _this.find(".content_container_list_small_and_big_list a").css({
                     "margin":"4px 2px",
                     "border":"1px solid transparent"
                 })
-                
+                // 详情列表
+                _this.find(".content_container_list_detail").css({
+                    "padding-left":"0px",
+                })
+                _this.find(".content_container_list_detail_list").css({
+                    "padding":"0",
+                    "border-bottom":"0",
+                    
+                })
+                _this.find(".content_container_list_detail_list:last-child").css({
+                    "padding":"0",
+                    "border-bottom":"0",
+                    
+                })
+                _this.find(".content_container_list_detail_list a").css({
+                    "margin":"5px 15px 15px 15px",
+                    "border":"1px solid #e5e5e5",
+                })
             }else if($this.parent().attr("showState")==1){
                 // 大图
                 // _this.find(".content_container_list_small").removeClass("container-fluid");
@@ -267,16 +285,33 @@ $(".shops_group").on("click",".box",function(){
                     "left":"0%",
                 });
                 // 小图
-                $(".content_container_list_small_list a").css({
+                _this.find(".content_container_list_small_list a").css({
                     "margin":"7px 8px 8px 7px",
                     "border":"1px solid #e5e5e5"
                 })
-                $(".content_container_list_small_and_big_list a").css({
+                _this.find(".content_container_list_small_and_big_list a").css({
                     "margin":"7px 8px 8px 7px",
                     "border":"1px solid #e5e5e5",
                     "padding":"0"
                 })
-                
+                // 详情列表
+                _this.find(".content_container_list_detail").css({
+                    "padding-left":"0px",
+                })
+                _this.find(".content_container_list_detail_list").css({
+                    "padding":"0",
+                    "border-bottom":"0",
+                    
+                })
+                _this.find(".content_container_list_detail_list:last-child").css({
+                    "padding":"0",
+                    "border-bottom":"0",
+                    
+                })
+                _this.find(".content_container_list_detail_list a").css({
+                    "margin":"5px 15px 15px 15px",
+                    "border":"1px solid #e5e5e5",
+                })
             }else if($this.parent().attr("showState")==2){
                 // _this.find(".content_container_list_small").addClass("container-fluid");
                 // _this.find(".content_container_list_small").attr("id","masonry");
@@ -314,29 +349,61 @@ $(".shops_group").on("click",".box",function(){
                     "position":"relative",
                     "left":"-50%",
                 });
+                // 详情列表
+                _this.find(".content_container_list_detail").css({
+                    "padding-left":"15px",
+                })
+                _this.find(".content_container_list_detail_list").css({
+                    "padding":"10px 15px 10px 0",
+                    "border-bottom":"1px solid #e5e5e5",
+                    
+                })
+                _this.find(".content_container_list_detail_list:last-child").css({
+                    "padding":"10px 15px 10px 0",
+                    "border-bottom":"none",
+                    
+                })
+                _this.find(".content_container_list_detail_list a").css({
+                    "margin":0,
+                    "margin-top":"5px",
+                    "border":"none",
+                })
             }else if($this.parent().attr("showState")==4){
                 _this.find(".sub_title").hide();
                 _this.find(".title").hide();
                 _this.find(".shop_btn").show();
                 _this.find(".shop_btn").addClass("btn_big").html("我要抢购");
+
             } 
         })
         // 购买按钮
         $(".btnStyleState").on("click",".big_circle",function(){
             $this=$(this);
             $(this).addClass("checked").parent().siblings().children(".big_circle").removeClass("checked");
-           
-        })
-       
-})
- /*------------------显示内容------------------ */
+           if($this.parent().attr("btnStyleState")==0){
+               _this.find(".shop_btn").html("@")
+           }else if($this.parent().attr("btnStyleState")==1){
+            _this.find(".shop_btn").html("2")
+           }else if($this.parent().attr("btnStyleState")==2){
+            _this.find(".shop_btn").html("3")
+           }else if($this.parent().attr("btnStyleState")==3){
+            _this.find(".shop_btn").html("4")
+        }
+    })
+     /*------------------显示内容------------------ */
         // 显示商品
+        _this.find(".sub_title_slide").hide();
         $(".contentState_one").on("click",".square",function(){
             $this=$(this);
             if(!$this.hasClass("cancle")){
                  $(this).addClass("cancle")
+                 _this.find(".title").show();
+                 _this.find(".title_slide").show();
             }else{
                 $(this).removeClass("cancle")
+                _this.find(".title").hide();
+                _this.find(".title_slide").hide();
+                
             }
            ;
            
@@ -346,8 +413,12 @@ $(".shops_group").on("click",".box",function(){
             $this=$(this);
             if(!$this.hasClass("cancle")){
                 $(this).addClass("cancle");
+                _this.find(".sub_title").show();
+               
            }else{
                $(this).removeClass("cancle");
+               _this.find(".sub_title").hide();
+               
            }
            
         })
@@ -356,16 +427,29 @@ $(".shops_group").on("click",".box",function(){
             $this=$(this);
             if(!$this.hasClass("cancle")){
                 $(this).addClass("cancle");
+                _this.find(".price").show();
+                _this.find(".price_slide").show();
            }else{
                 $(this).removeClass("cancle");
+                _this.find(".price").hide();
+                _this.find(".price_slide").hide();
            }
         })
          // 购买按钮
          $(".contentState_four").on("click",".square",function(){
             $this=$(this);
-            if($this.hasClass("cancle")){
-                $(this).removeClass("cancle");
-           }else{
+            if(!$this.hasClass("cancle")){
                 $(this).addClass("cancle");
+                _this.find(".shop_btn").show();
+                _this.find(".shopping_btn_style").show();
+           }else{
+                $(this).removeClass("cancle");
+                _this.find(".shop_btn").hide();
+                _this.find(".shopping_btn_style").hide();
+                
+
            }
         })
+       
+})
+
