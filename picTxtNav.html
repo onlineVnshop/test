@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="css/picTxtNav.css">
 <script type="text/javascript" src="libs/js/jquery.js"></script>
 <script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
-<script src="http://jq22.qiniudn.com/masonry-docs.min.js"></script>
+<!-- <script src="http://jq22.qiniudn.com/masonry-docs.min.js"></script> -->
 </head>
 <body>
 <div id="box">
@@ -20,7 +20,7 @@
     </div>
     <section>
       <div class="shops_group">
-        <div class="box">
+        <div class="box" data-type="tool_nav_compontent">
           <!-- 左侧 -->
             <div class="design_compontent_nav_preview">
               <ul class="cap_image_nav">
@@ -29,7 +29,7 @@
                     <span class="cap_image_nav_image">
                       <img src="https://img.yzcdn.cn/public_files/2018/01/30/585dae8447d80013ef9344adc973c6ee.png?imageView2/2/w/730/h/0/q/75/format/webp">
                     </span>
-                    <span class="cap_image_nav_title">xx</span>
+                    <span class="cap_image_nav_title" state=0>xx</span>
                   </a>
                 </li>
                 <li class="cap_image_nav_item">
@@ -37,7 +37,7 @@
                     <span class="cap_image_nav_image">
                       <img src="https://img.yzcdn.cn/public_files/2018/01/30/585dae8447d80013ef9344adc973c6ee.png?imageView2/2/w/730/h/0/q/75/format/webp">
                     </span>
-                    <span class="cap_image_nav_title">xx</span>
+                    <span class="cap_image_nav_title" state=1>xx</span>
                   </a>
                 </li>
                 <li class="cap_image_nav_item">
@@ -45,7 +45,7 @@
                     <span class="cap_image_nav_image">
                       <img src="https://img.yzcdn.cn/public_files/2018/01/30/585dae8447d80013ef9344adc973c6ee.png?imageView2/2/w/730/h/0/q/75/format/webp">
                     </span>
-                    <span class="cap_image_nav_title">xx</span>
+                    <span class="cap_image_nav_title" state=2>xx</span>
                   </a>
                 </li>
                 <li class="cap_image_nav_item">
@@ -53,13 +53,13 @@
                     <span class="cap_image_nav_image">
                       <img src="https://img.yzcdn.cn/public_files/2018/01/30/585dae8447d80013ef9344adc973c6ee.png?imageView2/2/w/730/h/0/q/75/format/webp">
                     </span>
-                    <span class="cap_image_nav_title">xx</span>
+                    <span class="cap_image_nav_title" state=3>xx</span>
                   </a>
                 </li>
               </ul>
             </div>
            <!-- 右侧 -->
-          <div class="design_editor_item">
+          <div class="design_editor_item tool_nav_compontent">
               <div class="design_compontent_nav_editor">
                 <div class="design_editor_component_title">
                   <div class="design_editor_component_title_name">图文导航
@@ -71,8 +71,9 @@
                       <div class="design_editor_component_subentry_item clearfloat">
                         <div class="image_editor">
                           <div class="has_choose_image">
-                            <img class="thumb_image src="" alt="width:80 height:80">
-                            <span class="modify-image">更换图片 </span> 
+                            <img class="thumb_image" src="" alt="width:80 height:80"state=0>
+                            
+                            <span class="modify-image"> 更换图片 </span> 
                           </div>
                         </div>
                         <div class="form_content">
@@ -80,7 +81,7 @@
                             <label class="control_group_container">
                               <div class="control_group_container_label">标题:</div>
                               <div class="input_wrapper">
-                                <input type="text" name="title" class="input_value">
+                                <input type="text" name="title" class="input_value" state=0>
                               </div>
                             </label>
                           </div>
@@ -90,6 +91,159 @@
                               <div class="link_menu">
                                   选择跳转的页面
                                   <i>+</i>
+                                  <ul class="select_box">
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                    </ul>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="design_editor_control_group">
+                  <div class="design_editor_card">
+                    <div class="design_editor_card_item">
+                      <div class="design_editor_component_subentry_item clearfloat">
+                        <div class="image_editor">
+                          <div class="has_choose_image">
+                            <img class="thumb_image" src="" alt="width:80 height:80"state=1>
+                            
+                            <span class="modify-image"> 更换图片 </span> 
+                          </div>
+                        </div>
+                        <div class="form_content">
+                          <div class="control_group">
+                            <label class="control_group_container">
+                              <div class="control_group_container_label">标题:</div>
+                              <div class="input_wrapper">
+                                <input type="text" name="title" class="input_value" state=1>
+                              </div>
+                            </label>
+                          </div>
+                          <div class="subentry_control_group">
+                            <label class="control_group_container">
+                              <div class="control_group_container_label">链接:</div>
+                              <div class="link_menu">
+                                  选择跳转的页面
+                                  <i>+</i>
+                                  <ul class="select_box">
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                    </ul>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="design_editor_control_group">
+                  <div class="design_editor_card">
+                    <div class="design_editor_card_item">
+                      <div class="design_editor_component_subentry_item clearfloat">
+                        <div class="image_editor">
+                          <div class="has_choose_image">
+                            <img class="thumb_image" src="" alt="width:80 height:80"state=2>
+                            
+                            <span class="modify-image"> 更换图片 </span> 
+                          </div>
+                        </div>
+                        <div class="form_content">
+                          <div class="control_group">
+                            <label class="control_group_container">
+                              <div class="control_group_container_label">标题:</div>
+                              <div class="input_wrapper">
+                                <input type="text" name="title" class="input_value" state=2>
+                              </div>
+                            </label>
+                          </div>
+                          <div class="subentry_control_group">
+                            <label class="control_group_container">
+                              <div class="control_group_container_label">链接:</div>
+                              <div class="link_menu">
+                                  选择跳转的页面
+                                  <i>+</i>
+                                  <ul class="select_box">
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                      <li><a href="#">购物车</a></li>
+                                    </ul>
+                                    
+                                </div>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="design_editor_control_group">
+                  <div class="design_editor_card">
+                    <div class="design_editor_card_item">
+                      <div class="design_editor_component_subentry_item clearfloat">
+                        <div class="image_editor">
+                          <div class="has_choose_image">
+                            <img class="thumb_image" src="" alt="width:80 height:80"state=3>
+                            
+                            <span class="modify-image"> 更换图片 </span> 
+                          </div>
+                        </div>
+                        <div class="form_content">
+                          <div class="control_group">
+                            <label class="control_group_container">
+                              <div class="control_group_container_label">标题:</div>
+                              <div class="input_wrapper">
+                                <input type="text" name="title" class="input_value" state=3>
+                              </div>
+                            </label>
+                          </div>
+                          <div class="subentry_control_group">
+                            <label class="control_group_container">
+                              <div class="control_group_container_label">链接:</div>
+                              <div class="link_menu">
+                                  选择跳转的页面
+                                  <i>+</i>
+                                  <ul class="select_box">
+                                    <li><a href="#">购物车</a></li>
+                                    <li><a href="#">购物车</a></li>
+                                    <li><a href="#">购物车</a></li>
+                                    <li><a href="#">购物车</a></li>
+                                    <li><a href="#">购物车</a></li>
+                                    <li><a href="#">购物车</a></li>
+                                    <li><a href="#">购物车</a></li>
+                                    <li><a href="#">购物车</a></li>
+                                    <li><a href="#">购物车</a></li>
+                                    <li><a href="#">购物车</a></li>
+                                  </ul>
+                                  
                               </div>
                             </label>
                           </div>
