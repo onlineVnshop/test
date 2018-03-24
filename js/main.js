@@ -11,7 +11,7 @@
 		})
 		//切换商品和商品分组 
 		$(".shop_and_groups").on("click",".big_circle",function(){
-			
+			console.log($(this))
 			
 			$(this).addClass("checked").siblings().removeClass("checked");
 			if($(this).attr("state")=="0"){

@@ -118,12 +118,13 @@ section{
   height: 100%;
 }
 .content_container_list li a{
-  width: 290px;
+  width: 288px;
+  border:1px solid transparent;
   margin: 5px 15px 15px 15px;
   position: relative;
 }
 .img_container{
-  width: 290px;
+  width: 288px;
   height: 100%;
 }
 .img_container img{
@@ -131,7 +132,7 @@ section{
   height: 100%;
 }
 .message_container{
-  width: 270px;
+  width: 268px;
   padding: 10px 10px 34px 10px;
 }
 .title{
@@ -203,6 +204,7 @@ footer{
   position: absolute;
   top: 0%;
   left: 100%;
+  display: none;
 }
 .design_editor::before{
   content: "";
@@ -405,6 +407,7 @@ footer{
   overflow: hidden;
   padding: 0 7px;
 }
+
 .content_container_list_small_list{
   float: left;
   width: 50%;
@@ -421,7 +424,8 @@ footer{
   min-height: 100px;
   color: #333;
   background-color: #fff;
-  margin: 5px 3px;
+  margin: 4px 2px;
+  border:1px solid transparent;
 }
 .img_container_small{
   text-align: center;
@@ -441,7 +445,43 @@ footer{
 .message_container_small{
   padding:10px 10px 34px 10px;
   text-align: left;
+  /* float: left; /* 自适应内容宽度 */
+  /* position: relative;
+  left: 50%;  */
 } 
+/* 瀑布流布局start */
+.container-fluid {
+  padding: 20px;
+  overflow: hidden;
+  height:200px !important;
+  width: 320px;
+  display: block;
+  }
+  .container-fluid>.box_fluid{
+  margin-bottom: 20px;
+  float: left;
+  width: 140px;
+  }
+  .box_fluid a{
+  max-width: 100%;
+  /* height: 200px; */
+  margin:8px 3px;
+}
+
+/* 瀑布流布局end */
+.btn_big{
+  width:90px!important;
+  height:40px!important;
+  background:#f44;
+  color:#fff;
+  text-align: center;
+  line-height: 40px;
+  font-size:12px;
+  border-radius: 0px!important;
+  bottom:0px!important;
+  right:0px!important;
+
+}
 /* 一大两小 */
 .content_container_list_small_and_big{
   overflow: hidden;
@@ -461,7 +501,7 @@ footer{
 }
 .message_container_big{
   width: 100%;
-  padding: 10px 0px 34px 0px;
+  padding: 10px 10px 34px 10px;
 }
 .title{
   line-height: 18px;
@@ -488,6 +528,8 @@ footer{
   position: absolute;
   bottom: 10px;
   left: 10px;
+  /* position: relative;
+  left: -50%; */
 }
 .price em{
   color: #f44;
@@ -693,7 +735,7 @@ footer{
   display: flex;
   flex-wrap: nowrap;
   margin-bottom: -10px;
-  overflow: hidden;
+  overflow-x: scroll;
 }
 .content_container_list_detail_slide{
   -webkit-box_flex: 0;
