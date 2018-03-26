@@ -393,23 +393,27 @@ $(".shops_group").on("click",".box",function(){
      /*------------------显示内容------------------ */
         // 显示商品
         _this.find(".sub_title_slide").hide();
-        $(".contentState_one").on("click",".square",function(){
+        $(".contentState_one").on("click",".square",function(e){
+            e.stopPropagation();
+            var
             $this=$(this);
             if(!$this.hasClass("cancle")){
                  $(this).addClass("cancle")
                  _this.find(".title").show();
                  _this.find(".title_slide").show();
+                 console.log($this)
             }else{
                 $(this).removeClass("cancle")
                 _this.find(".title").hide();
                 _this.find(".title_slide").hide();
-                
+                console.log($this)
             }
            ;
            
         })
         // 显示简介
-        $(".contentState_two").on("click",".square",function(){
+        $(".contentState_two").on("click",".square",function(e){
+            e.stopPropagation();
             $this=$(this);
             if(!$this.hasClass("cancle")){
                 $(this).addClass("cancle");
@@ -423,7 +427,8 @@ $(".shops_group").on("click",".box",function(){
            
         })
         // 价格
-        $(".contentState_three").on("click",".square",function(){
+        $(".contentState_three").on("click",".square",function(e){
+            e.stopPropagation();
             $this=$(this);
             if(!$this.hasClass("cancle")){
                 $(this).addClass("cancle");
@@ -436,7 +441,8 @@ $(".shops_group").on("click",".box",function(){
            }
         })
          // 购买按钮
-         $(".contentState_four").on("click",".square",function(){
+         $(".contentState_four").on("click",".square",function(e){
+            e.stopPropagation();
             $this=$(this);
             if(!$this.hasClass("cancle")){
                 $(this).addClass("cancle");
