@@ -11,22 +11,100 @@
 <link type="text/css" href="css/jquery.marquee.css" rel="stylesheet" media="all" />
 </head>
 <style>
-
+* {
+	padding:0;
+	margin:0;
+	font-family:"微软雅黑";
+}
+/* li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+img {
+	border:none;
+} */
+/* .box {
+	padding-left:50px;
+	background:url("images/xtb.png") no-repeat;
+	margin-top:100px;
+	margin-left:100px;
+} */
+.winBox {
+	width:300px;
+	height:40px;
+	overflow:hidden;
+	position:relative;
+	background:pink;
+}
+.scroll {
+	/*width的大小是根据下面li的长度和多少个li而定的，需注意！*/
+			width:1500px;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.box{
+  width:300px;
+  height:20px;
+  margin:0 auto;
+}
+#ab{
+  margin:0 auto;
+}
 </style>
 <body>
- <ul id="marquee" class="marquee">
-  <li>
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed a nulla. 
-    Lorem ipsum dolor sit amet, consectetuer.
-  </li>
- 
-</ul>
+  <!-- <div class="box">
+    <div class="winBox">
+      <div class="scroll">
+        <div>时尚休闲裤68元</div>
+        </div>
+    </div>
+  </div> -->
+  <!-- <div class="box">
+<marquee>
+    nihsi123456
+  </marquee>
+
+  </div>
+   -->
+   <marquee id="ab" align="left" behavior="scroll" bgcolor="#FF0000" direction="up" height="300" width="200" hspace="50" vspace="20" loop="-1" scrollamount="10" scrolldelay="100" onMouseOut="this.start()" onMouseOver="this.stop()">ddfdfsfsfds</marquee>
+  <!-- <button id="left">«</button> <button id="right">»</button>
+  <div class="block">122</div> -->
 <script type="text/javascript">
+// $("#right").click(function(){
+//   $(".block").animate({left: '+500px'}, "slow");
+// });
 
-$(document).ready(function (){
-  $("#marquee").marquee();
-});
-
+// $("#left").click(function(){
+//   $(".block").animate({left: '-500px'}, "slow");
+// });
+// $(function() {
+//   var num = 0;
+//   function goLeft() {
+//       //750是根据你给的尺寸，可变的
+//       if (num == -750) {
+//           num = 0;
+//       }
+//       num -= 1;
+//       $(".scroll").css({
+//           left: num
+//       })
+//   }
+//   //设置滚动速度
+//   var timer = setInterval(goLeft, 20);
+//   //设置鼠标经过时滚动停止
+//   $(".box").hover(function() {
+//       clearInterval(timer);
+//   },
+//   function() {
+//       timer = setInterval(goLeft, 20);
+//   })
+// })
+$(".box").mouseover(function(){
+  $(this).stop()
+})
 </script>
 
 </body>
