@@ -6,33 +6,25 @@ $(".notice_compontent").on("click",".box",function(){
 		console.log(1)
 		_this.find(".notice_nav_content").html($(this).val())
 	})
-	// 设置背景颜色
-	$(".color_picker_container").on("click",".color",function(){
-		$(document).mouseup(function(e){
-		_this.find(".notice_container").css("background","#"+$(this).find(".color").eq(0).val())
-		console.log($(this).find(".color").eq(0).val())
+	$(document).mousemove(function(){
+		console.log(1)
+		$(".notice_container").css("background","#"+$(".color").val())		
+			
+		$(".bg_color_reset").click(function(e){
+			$(".bg").val("FFF8E9")
+			$(".bg").css("background-color","#FFF8E9");
+			$(".notice_container").css("background","#FFF8E9");
+			
 		})
 	})
-	// 重置背景颜色
-	$(".editor_menu_group_control").on("click",".bg_color_reset",function(){
-		
-		_this.find(".notice_container").css("background","#FFF8E9");
-	})
-
-	// 设置字颜色
-	$(".color_picker_container").on("click",".color",function(){
-		$(document).mouseup(function(e){
-			_this.find(".notice_nav_content").css("color","#"+$(this).find(".color").eq(1).val())
-			// console.log($(this).find(".color").eq(1).val())
+	$(document).mousemove(function(){
+		$(".notice_nav_content").css("color","#"+$(".font").val())		
+		$(".font_color_reset").click(function(e){
+			$(".font").val("666666")
+			$(".font").css("background-color","#666666");
+			$(".notice_nav_content").css("color","#666666");
+			
 		})
-	})
-	// 重置字体颜色
-	$(".editor_menu_group_control").on("click",".font_color_reset",function(e){
-		_this.find(".notice_nav_content").css("color","#666666");
-	})
 
-
+	})
 })
-// $(document).ready(function (){
-//   $("#marquee").marquee();
-// });
